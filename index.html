@@ -30,6 +30,7 @@
     .no-scrollbar::-webkit-scrollbar { display:none; }
     .no-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Great+Vibes&family=Lobster&family=Pacifico&family=Permanent+Marker&family=Righteous&display=swap" rel="stylesheet">
 </head>
 <body class="min-h-screen flex flex-col selection:bg-amber-500 selection:text-zinc-950">
   <div id="gallery-view" class="flex-1 flex flex-col">
@@ -869,8 +870,8 @@ function drawDotGrid(ctx,sx,sy,cols,rows,sp,r,col){ ctx.save(); ctx.fillStyle=co
       }
       if(bgBr !== 100){
         ctx.save();
-        if(bgBr > 100){ ctx.fillStyle = `rgba(255,255,255,${Math.min(0.45,(bgBr-100)/140)})`; ctx.fillRect(0,0,W,H); }
-        else { ctx.fillStyle = `rgba(0,0,0,${Math.min(0.65,(100-bgBr)/80)})`; ctx.fillRect(0,0,W,H); }
+        if(bgBr > 100){ ctx.fill= `rgba(255,255,255,${Math.min(0.45,(bgBr-100)/140)})`; ctx.fillRect(0,0,W,H); }
+        else { ctx.fill= `rgba(0,0,0,${Math.min(0.65,(100-bgBr)/80)})`; ctx.fillRect(0,0,W,H); }
         ctx.restore();
       }
       ctx.save();
@@ -906,7 +907,7 @@ function drawDotGrid(ctx,sx,sy,cols,rows,sp,r,col){ ctx.save(); ctx.fillStyle=co
       if(vig > 0){
         const vg = ctx.createRadialGradient(W*0.5, H*0.46, Math.min(W,H)*0.25, W*0.5, H*0.5, Math.max(W,H)*0.78);
         vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, `rgba(0,0,0,${(vig/100)*0.75})`);
-        ctx.fillStyle = vg; ctx.fillRect(0,0,W,H);
+        ctx.fill= vg; ctx.fillRect(0,0,W,H);
       }
       ctx.restore();
     }
@@ -1407,6 +1408,155 @@ function renderCategoryTabs(){
       restoreDraftIfActive();
     }
     window.addEventListener('DOMContentLoaded',initApp);
+    /* ===== PATCH: ELEMENTOS (estilo Canva) — AD Jardim Mariano ===== */
+(function(){
+  const S=b=>`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">${b}</svg>`;
+  const gr=(id,a,b,v)=>`<linearGradient id="${id}" x1="0" y1="0" x2="${v?0:1}" y2="${v?1:0}"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient>`;
+  const skin='#e8b48a', skin2='#c98d63';
+  const person=(cloth,hair,dx=0,sc=1,woman=false,kid=false)=>{
+    const k=kid?0.62:1;
+    return `<g transform="translate(${dx} ${kid?58:0}) scale(${sc*k})" transform-origin="100 200">
+    ${woman?`<path d="M70 62C66 20 134 20 130 62C136 100 128 118 120 120L80 120C72 118 64 100 70 62Z" fill="${hair}"/>`:''}
+    <path d="M60 200C58 150 70 124 100 120C130 124 142 150 140 200Z" fill="${cloth}"/>
+    <path d="M84 122L100 150L116 122Z" fill="#f5f5f4"/>
+    <rect x="90" y="100" width="20" height="24" rx="8" fill="${skin2}"/>
+    <ellipse cx="100" cy="72" rx="24" ry="29" fill="${skin}"/>
+    ${woman?`<path d="M74 66C80 40 120 40 126 66C116 54 84 54 74 66Z" fill="${hair}"/>`:`<path d="M76 66C74 38 126 38 124 66C116 52 84 52 76 66Z" fill="${hair}"/>`}
+    <circle cx="91" cy="74" r="2.4" fill="#3b2a20"/><circle cx="109" cy="74" r="2.4" fill="#3b2a20"/>
+    <path d="M92 86Q100 93 108 86" stroke="#9a4b3c" stroke-width="2.4" fill="none" stroke-linecap="round"/></g>`;
+  };
+  const wing=`<path d="M100 128C78 108 46 78 14 30C26 62 38 88 60 108C44 98 30 84 18 66C32 104 64 130 100 142Z" fill="url(#dv)" stroke="#d6c28f" stroke-width="1.4"/>
+    <path d="M96 118C74 100 52 78 30 50M96 126C72 112 52 96 34 80" stroke="#d6c28f" stroke-width="1.2" fill="none"/>`;
+  const ELS=[
+    ['Pomba do Espírito Santo','simbolos','pomba espirito santo ad assembleia paz',S(`<defs>${gr('dv','#ffffff','#e9e2cf',1)}</defs><g>${wing}</g><g transform="translate(200 0) scale(-1 1)">${wing}</g><path d="M100 68C114 68 120 82 116 98C113 118 108 144 100 176C92 144 87 118 84 98C80 82 86 68 100 68Z" fill="url(#dv)" stroke="#d6c28f" stroke-width="1.4"/><circle cx="100" cy="62" r="11" fill="#fff" stroke="#d6c28f" stroke-width="1.4"/><path d="M109 60L124 65L109 69Z" fill="#e8923a"/><circle cx="104" cy="60" r="1.8" fill="#222"/><path d="M100 150L86 192L100 180L114 192Z" fill="url(#dv)" stroke="#d6c28f" stroke-width="1.2"/>`)],
+    ['Pomba com ramo de oliveira','simbolos','pomba oliveira paz ramo',S(`<defs>${gr('dv','#ffffff','#e9e2cf',1)}</defs><path d="M30 120C60 70 120 50 160 80C140 90 110 110 80 150C60 160 40 150 30 120Z" fill="url(#dv)" stroke="#d6c28f" stroke-width="2"/><circle cx="154" cy="78" r="12" fill="#fff" stroke="#d6c28f" stroke-width="2"/><path d="M164 76L184 82L164 86Z" fill="#e8923a"/><path d="M184 82C150 120 120 130 90 120" stroke="#5a8a3a" stroke-width="3" fill="none"/><g fill="#6aa84f"><ellipse cx="150" cy="108" rx="9" ry="4" transform="rotate(-30 150 108)"/><ellipse cx="128" cy="120" rx="9" ry="4" transform="rotate(-20 128 120)"/><ellipse cx="108" cy="124" rx="9" ry="4" transform="rotate(10 108 124)"/></g>`)],
+    ['Cruz dourada','simbolos','cruz jesus cristo calvario',S(`<defs>${gr('g1','#fff3b0','#c8932b',1)}</defs><rect x="84" y="14" width="32" height="172" rx="5" fill="url(#g1)" stroke="#8a6215" stroke-width="2"/><rect x="40" y="62" width="120" height="32" rx="5" fill="url(#g1)" stroke="#8a6215" stroke-width="2"/>`)],
+    ['Bíblia aberta','simbolos','biblia livro palavra estudo',S(`<defs>${gr('bb','#fffdf5','#e7dcc0',0)}</defs><path d="M100 54C76 40 44 42 20 54V162C44 150 76 152 100 166C124 152 156 150 180 162V54C156 42 124 40 100 54Z" fill="url(#bb)" stroke="#8a6a3a" stroke-width="3"/><path d="M100 54V166" stroke="#8a6a3a" stroke-width="3"/><g stroke="#b9a77c" stroke-width="2"><path d="M34 76Q64 70 90 80M34 94Q64 88 90 98M34 112Q64 106 90 116M110 80Q136 70 166 76M110 98Q136 88 166 94M110 116Q136 106 166 112"/></g>`)],
+    ['Cálice da Santa Ceia','simbolos','calice ceia vinho santa',S(`<defs>${gr('cc','#fff3b0','#b5812a',1)}</defs><path d="M52 40H148C148 96 124 112 100 116C76 112 52 96 52 40Z" fill="url(#cc)" stroke="#7a5416" stroke-width="3"/><path d="M58 52H142C140 70 134 80 128 86C110 92 90 92 72 86C66 80 60 70 58 52Z" fill="#8b1e2d"/><rect x="94" y="116" width="12" height="44" fill="url(#cc)"/><ellipse cx="100" cy="170" rx="42" ry="10" fill="url(#cc)" stroke="#7a5416" stroke-width="2"/>`)],
+    ['Chama do Espírito','simbolos','fogo chama avivamento espirito',S(`<defs>${gr('fl','#fff176','#e53935',1)}</defs><path d="M100 14C120 54 160 74 150 124C146 160 120 186 100 186C80 186 54 160 50 124C44 90 70 74 78 50C86 64 90 70 100 14Z" fill="url(#fl)"/><path d="M100 84C112 108 128 118 122 142C118 158 108 166 100 166C92 166 82 158 78 142C74 122 92 112 100 84Z" fill="#fff59d"/>`)],
+    ['Coroa','simbolos','coroa rei reino',S(`<defs>${gr('cr','#fff3b0','#c8932b',1)}</defs><path d="M24 150L34 64L72 100L100 48L128 100L166 64L176 150Z" fill="url(#cr)" stroke="#7a5416" stroke-width="3"/><rect x="24" y="150" width="152" height="18" rx="4" fill="url(#cr)" stroke="#7a5416" stroke-width="3"/><g fill="#d32f2f"><circle cx="100" cy="148" r="6"/><circle cx="64" cy="148" r="5"/><circle cx="136" cy="148" r="5"/></g>`)],
+    ['Mãos orando','simbolos','maos orando oracao',S(`<defs>${gr('hn','#f1c9a5','#cf9468',1)}</defs><path d="M100 24C86 50 78 76 78 104L82 150C84 168 94 180 100 184C106 180 116 168 118 150L122 104C122 76 114 50 100 24Z" fill="url(#hn)" stroke="#9a6a45" stroke-width="2.5"/><path d="M100 24V184" stroke="#9a6a45" stroke-width="2"/>`)],
+    ['Raios de luz','efeitos','luz raios brilho holofote',S(`<defs><radialGradient id="rl"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><g fill="url(#rl)">${Array.from({length:12},(_,i)=>`<path d="M100 100L${100+120*Math.cos(i*Math.PI/6-0.1)} ${100+120*Math.sin(i*Math.PI/6-0.1)}L${100+120*Math.cos(i*Math.PI/6+0.1)} ${100+120*Math.sin(i*Math.PI/6+0.1)}Z"/>`).join('')}</g><circle cx="100" cy="100" r="30" fill="url(#rl)"/>`)],
+    ['Brilho (sparkle)','efeitos','brilho estrela sparkle',S(`<path d="M100 10C104 70 130 96 190 100C130 104 104 130 100 190C96 130 70 104 10 100C70 96 96 70 100 10Z" fill="#fff8d6"/>`)],
+    ['Estrela','formas','estrela natal',S(`<defs>${gr('st','#fff3b0','#e0a526',1)}</defs><path d="M100 14L123 74L186 78L137 118L153 180L100 146L47 180L63 118L14 78L77 74Z" fill="url(#st)" stroke="#a97510" stroke-width="2.5"/>`)],
+    ['Coração','formas','coracao amor casal',S(`<defs>${gr('ht','#ff8a8a','#b71c1c',1)}</defs><path d="M100 176C20 120 22 52 66 44C84 41 96 52 100 64C104 52 116 41 134 44C178 52 180 120 100 176Z" fill="url(#ht)"/><ellipse cx="68" cy="66" rx="14" ry="8" fill="#fff" opacity=".35" transform="rotate(-30 68 66)"/>`)],
+    ['Homem de terno','pessoas','homem pessoa pregador pastor terno',S(person('#1f2a44','#2b1d14'))],
+    ['Mulher','pessoas','mulher pessoa pastora cabelo',S(person('#7b2d4e','#3a2216',0,1,true))],
+    ['Jovem','pessoas','jovem pessoa rapaz adolescente',S(person('#2563eb','#4a3020'))],
+    ['Moça jovem','pessoas','moca jovem menina mulher',S(person('#0f766e','#6b3b1e',0,1,true))],
+    ['Criança','pessoas','crianca kids menino menina infantil',S(person('#f59e0b','#3a2216',0,1,false,true))],
+    ['Casal','pessoas','casal casamento marido esposa',S(person('#1f2a44','#2b1d14',-34,0.8)+person('#9d174d','#3a2216',34,0.8,true))],
+    ['Família','pessoas','familia pais filhos pai mae',S(person('#1f2a44','#2b1d14',-52,0.72)+person('#7b2d4e','#3a2216',52,0.72,true)+person('#f59e0b','#3a2216',0,1,false,true))],
+    ['Grupo de pessoas','pessoas','grupo pessoas comunidade igreja',S(person('#2563eb','#2b1d14',-58,0.62)+person('#be185d','#3a2216',58,0.62,true)+person('#16a34a','#4a3020',-22,0.7)+person('#7c3aed','#2b1d14',22,0.7,true))],
+    ['Microfone','objetos','microfone louvor cantor ministracao',S(`<defs>${gr('mc','#9ca3af','#374151',1)}</defs><rect x="76" y="20" width="48" height="86" rx="24" fill="url(#mc)"/><path d="M60 80V100C60 126 78 140 100 140C122 140 140 126 140 100V80" stroke="#374151" stroke-width="8" fill="none"/><rect x="94" y="140" width="12" height="32" fill="#374151"/><rect x="68" y="172" width="64" height="10" rx="5" fill="#374151"/>`)],
+    ['Nota musical','objetos','musica louvor nota coral',S(`<path d="M80 150V50L160 30V130" stroke="#fff" stroke-width="10" fill="none"/><ellipse cx="62" cy="152" rx="24" ry="17" fill="#fff"/><ellipse cx="142" cy="132" rx="24" ry="17" fill="#fff"/>`)],
+    ['Balões','objetos','baloes festa aniversario',S(`<ellipse cx="66" cy="70" rx="34" ry="42" fill="#ef4444"/><ellipse cx="124" cy="58" rx="34" ry="42" fill="#3b82f6"/><ellipse cx="100" cy="94" rx="34" ry="42" fill="#facc15"/><g stroke="#ddd" stroke-width="2" fill="none"><path d="M66 112Q80 150 100 190"/><path d="M124 100Q112 150 100 190"/><path d="M100 136V190"/></g><ellipse cx="54" cy="52" rx="8" ry="12" fill="#fff" opacity=".4"/>`)],
+    ['Bolo de aniversário','objetos','bolo aniversario parabens',S(`<rect x="40" y="110" width="120" height="60" rx="8" fill="#f9a8d4"/><rect x="52" y="76" width="96" height="40" rx="8" fill="#fbcfe8"/><path d="M40 112Q55 130 70 112Q85 130 100 112Q115 130 130 112Q145 130 160 112" fill="#fff"/><g fill="#facc15"><rect x="70" y="50" width="6" height="26"/><rect x="97" y="50" width="6" height="26"/><rect x="124" y="50" width="6" height="26"/></g><g fill="#f97316"><ellipse cx="73" cy="44" rx="5" ry="9"/><ellipse cx="100" cy="44" rx="5" ry="9"/><ellipse cx="127" cy="44" rx="5" ry="9"/></g>`)],
+    ['Presente','objetos','presente caixa gift natal',S(`<rect x="34" y="82" width="132" height="94" rx="6" fill="#dc2626"/><rect x="28" y="58" width="144" height="30" rx="6" fill="#ef4444"/><rect x="92" y="58" width="16" height="118" fill="#facc15"/><path d="M100 58C70 20 40 36 62 56ZM100 58C130 20 160 36 138 56Z" fill="#facc15"/>`)],
+    ['Cordeiro','simbolos','cordeiro ovelha pascoa',S(`<g fill="#fff" stroke="#cfcfcf" stroke-width="2"><circle cx="70" cy="90" r="26"/><circle cx="100" cy="76" r="28"/><circle cx="132" cy="88" r="26"/><circle cx="90" cy="112" r="26"/><circle cx="120" cy="114" r="26"/></g><ellipse cx="44" cy="84" rx="18" ry="22" fill="#3a3a3a"/><rect x="72" y="130" width="8" height="40" fill="#3a3a3a"/><rect x="116" y="130" width="8" height="40" fill="#3a3a3a"/>`)],
+    ['Trigo','simbolos','trigo colheita pao missoes',S(`<g stroke="#a47a1e" stroke-width="3" fill="#e5b73b"><path d="M100 190V60" fill="none"/>${[0,1,2,3,4].map(i=>`<ellipse cx="86" cy="${64+i*16}" rx="8" ry="14" transform="rotate(-25 86 ${64+i*16})"/><ellipse cx="114" cy="${64+i*16}" rx="8" ry="14" transform="rotate(25 114 ${64+i*16})"/>`).join('')}<ellipse cx="100" cy="42" rx="8" ry="16"/></g>`)],
+    ['Peixe (ichthys)','simbolos','peixe ichthys cristao',S(`<path d="M20 100C60 40 120 40 160 100C120 160 60 160 20 100ZM160 100L190 66V134Z" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="round"/>`)],
+    ['Igreja','objetos','igreja templo casa',S(`<rect x="50" y="90" width="100" height="90" fill="#f5f5f4" stroke="#a8a29e" stroke-width="2"/><path d="M40 92L100 54L160 92Z" fill="#b45309"/><rect x="88" y="14" width="24" height="46" fill="#f5f5f4" stroke="#a8a29e" stroke-width="2"/><path d="M100 4V30M90 14H110" stroke="#c8932b" stroke-width="4"/><path d="M84 180V138C84 120 116 120 116 138V180Z" fill="#78350f"/><circle cx="68" cy="116" r="8" fill="#93c5fd"/><circle cx="132" cy="116" r="8" fill="#93c5fd"/>`)],
+    ['Alianças','simbolos','aliancas casamento bodas',S(`<defs>${gr('rg','#fff3b0','#b5812a',1)}</defs><circle cx="76" cy="110" r="42" fill="none" stroke="url(#rg)" stroke-width="12"/><circle cx="126" cy="110" r="42" fill="none" stroke="url(#rg)" stroke-width="12"/><path d="M100 36L112 52L100 66L88 52Z" fill="#bae6fd" stroke="#38bdf8" stroke-width="2"/>`)],
+    ['Flor','formas','flor rosa floral mulheres',S(`<g fill="#f9a8d4" stroke="#ec4899" stroke-width="2">${[0,1,2,3,4,5].map(i=>`<ellipse cx="100" cy="56" rx="22" ry="38" transform="rotate(${i*60} 100 100)"/>`).join('')}</g><circle cx="100" cy="100" r="18" fill="#facc15"/>`)],
+    ['Nuvem','formas','nuvem ceu',S(`<path d="M52 150C20 150 20 106 52 104C54 70 100 60 116 90C140 74 172 96 160 126C184 130 178 150 156 150Z" fill="#fff" opacity=".95"/>`)],
+  ];
+  const state=()=>editorState;
+  const imgCache={};
+  function getImg(el){
+    const k=el.src||el.svg; if(imgCache[k]) return imgCache[k];
+    const im=new Image(); if(el.src) im.crossOrigin='anonymous';
+    im.onload=()=>renderStudio(); im.src=el.src||('data:image/svg+xml;charset=utf-8,'+encodeURIComponent(el.svg));
+    return imgCache[k]=im;
+  }
+  let sel=null, elHits=[], hideSel=false;
+  function drawEls(canvas){
+    elHits=[]; const st=state(); if(!st.elements||!st.elements.length) return; const ctx=canvas.getContext('2d');
+    st.elements.forEach(el=>{
+      const im=getImg(el); if(!im.complete||!im.naturalWidth) return;
+      const w=el.s, h=el.s*im.naturalHeight/im.naturalWidth;
+      ctx.save(); ctx.translate(el.x,el.y); ctx.rotate(el.rot*Math.PI/180); if(el.flip) ctx.scale(-1,1);
+      ctx.globalAlpha=el.op/100;
+      if(el.blur>0 && 'filter' in ctx) ctx.filter=`blur(${el.blur}px)`;
+      if(el.shadow>0){ ctx.shadowColor='rgba(0,0,0,0.55)'; ctx.shadowBlur=el.shadow; ctx.shadowOffsetY=el.shadow*0.4; }
+      ctx.drawImage(im,-w/2,-h/2,w,h); ctx.restore();
+      if(el===sel&&!hideSel){ ctx.save(); ctx.translate(el.x,el.y); ctx.rotate(el.rot*Math.PI/180); ctx.strokeStyle='#e5a93c'; ctx.setLineDash([12,8]); ctx.lineWidth=3; ctx.strokeRect(-w/2,-h/2,w,h); ctx.restore(); }
+      elHits.push({el,x:el.x-w/2,y:el.y-h/2,w,h});
+    });
+  }
+  const _orig=renderArtToCanvas;
+  renderArtToCanvas=function(canvas,tpl,s,hits){ _orig(canvas,tpl,s,hits); if(s===editorState) drawEls(canvas); };
+  const _dl=downloadPNG;
+  downloadPNG=function(){ hideSel=true; renderStudio(); _dl(); hideSel=false; renderStudio(); };
+  function addEl(o){
+    const st=state(); st.elements=st.elements||[]; const W=studioCanvas.width,H=studioCanvas.height;
+    const el=Object.assign({x:W/2,y:H/2,s:Math.round(W*0.28),rot:0,op:100,shadow:18,blur:0,flip:false},o);
+    st.elements.push(el); sel=el; syncCtl(); renderStudio();
+  }
+  /* UI */
+  function buildUI(){
+    const tabs=document.querySelector('.tool-tab').parentElement; tabs.classList.replace('grid-cols-4','grid-cols-5');
+    tabs.insertAdjacentHTML('beforeend','<button onclick="switchToolTab(\'elementos\')" data-tool="elementos" class="tool-tab py-2.5 text-xs font-semibold border-b-2 transition text-zinc-400 border-transparent">Elementos</button>');
+    const host=document.getElementById('panel-textos').parentElement;
+    host.insertAdjacentHTML('beforeend',`<div id="panel-elementos" class="tool-panel hidden space-y-3">
+      <input id="el-search" type="text" placeholder="Pesquisar: pessoa, pomba, cruz, família..." class="w-full bg-zinc-950 border border-zinc-800 focus:border-amber-500 rounded-lg px-3 py-2 text-sm text-white focus:outline-none">
+      <div id="el-grid" class="grid grid-cols-4 gap-1.5 max-h-56 overflow-y-auto"></div>
+      <label class="block text-center py-2 rounded-lg bg-amber-500 text-zinc-950 text-xs font-bold cursor-pointer">Enviar PNG como elemento (ex: logo da pomba AD)<input id="el-upload" type="file" accept="image/*" class="hidden"></label>
+      <div class="pt-2 border-t border-zinc-800 space-y-2">
+        <span class="text-[11px] font-semibold uppercase text-amber-400">Buscar fotos/imagens reais online</span>
+        <div class="flex gap-1.5"><input id="web-q" type="text" placeholder="ex: pregador, família, pomba branca" class="flex-1 bg-zinc-950 border border-zinc-800 rounded px-2 py-1.5 text-xs text-white"><button id="web-go" class="px-3 rounded bg-zinc-800 text-xs text-white">Buscar</button></div>
+        <div id="web-status" class="text-[11px] text-zinc-400"></div>
+        <div id="web-grid" class="grid grid-cols-3 gap-1.5 max-h-48 overflow-y-auto"></div>
+      </div>
+      <div id="el-ctl" class="pt-2 border-t border-zinc-800 space-y-2 hidden">
+        <span class="text-[11px] font-semibold uppercase text-amber-400">Elemento selecionado</span>
+        ${[['s','Tamanho',60,1800],['rot','Girar',-180,180],['op','Opacidade',10,100],['shadow','Sombra',0,60],['blur','Desfoque',0,20]].map(([k,l,a,b])=>`<div><div class="flex justify-between text-[11px] text-zinc-400"><span>${l}</span><span id="elv-${k}" class="font-mono text-amber-400"></span></div><input id="elc-${k}" type="range" min="${a}" max="${b}" class="w-full h-1.5 bg-zinc-800 rounded-lg"></div>`).join('')}
+        <div class="flex gap-1.5"><button id="el-flip" class="flex-1 py-1.5 rounded bg-zinc-800 text-xs text-white">⇄ Espelhar</button><button id="el-front" class="flex-1 py-1.5 rounded bg-zinc-800 text-xs text-white">Frente</button><button id="el-back" class="flex-1 py-1.5 rounded bg-zinc-800 text-xs text-white">Trás</button><button id="el-del" class="flex-1 py-1.5 rounded bg-rose-500/20 text-rose-400 text-xs">Excluir</button></div>
+      </div>
+    </div>`);
+    document.getElementById('el-search').addEventListener('input',e=>renderGrid(e.target.value));
+    document.getElementById('el-upload').addEventListener('change',e=>{ const f=e.target.files[0]; if(!f) return; const r=new FileReader(); r.onload=ev=>addEl({src:ev.target.result}); r.readAsDataURL(f); e.target.value=''; });
+    document.getElementById('web-go').onclick=webSearch; document.getElementById('web-q').addEventListener('keydown',e=>{ if(e.key==='Enter') webSearch(); });
+    ['s','rot','op','shadow','blur'].forEach(k=>document.getElementById('elc-'+k).addEventListener('input',e=>{ if(!sel) return; sel[k]=Number(e.target.value); document.getElementById('elv-'+k).textContent=sel[k]; renderStudio(); }));
+    document.getElementById('el-flip').onclick=()=>{ if(sel){ sel.flip=!sel.flip; renderStudio(); } };
+    const arr=()=>state().elements, mv=to=>{ if(!sel) return; const a=arr(), i=a.indexOf(sel); a.splice(i,1); to?a.push(sel):a.unshift(sel); renderStudio(); };
+    document.getElementById('el-front').onclick=()=>mv(true); document.getElementById('el-back').onclick=()=>mv(false);
+    document.getElementById('el-del').onclick=()=>{ if(!sel) return; state().elements=arr().filter(x=>x!==sel); sel=null; syncCtl(); renderStudio(); };
+    renderGrid('');
+  }
+  function renderGrid(q){
+    const n=normalizeText(q.trim()), list=ELS.filter(e=>!n||n.split(/\s+/).every(t=>normalizeText(e[0]+' '+e[1]+' '+e[2]).includes(t)));
+    const g=document.getElementById('el-grid'); g.innerHTML=list.map((e,i)=>`<button data-i="${ELS.indexOf(e)}" title="${e[0]}" class="bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-amber-500 rounded p-1"><img src="data:image/svg+xml;charset=utf-8,${encodeURIComponent(e[3])}" class="w-full aspect-square object-contain"></button>`).join('')||'<p class="col-span-4 text-xs text-zinc-500">Nada encontrado. Tente a busca online abaixo.</p>';
+    g.querySelectorAll('button').forEach(b=>b.onclick=()=>addEl({svg:ELS[b.dataset.i][3]}));
+  }
+  async function webSearch(){
+    const q=document.getElementById('web-q').value.trim(), st=document.getElementById('web-status'), g=document.getElementById('web-grid'); if(!q) return;
+    st.textContent='Buscando...'; g.innerHTML='';
+    try{
+      const r=await fetch('https://api.openverse.org/v1/images/?page_size=18&license_type=commercial&q='+encodeURIComponent(q)); const d=await r.json();
+      st.textContent=(d.results||[]).length?'Clique para adicionar (confira a licença da imagem).':'Nada encontrado.';
+      g.innerHTML=(d.results||[]).map((x,i)=>`<button data-i="${i}" class="bg-zinc-900 border border-zinc-800 hover:border-amber-500 rounded overflow-hidden"><img src="${x.thumbnail||x.url}" class="w-full aspect-square object-cover"></button>`).join('');
+      g.querySelectorAll('button').forEach(b=>b.onclick=()=>addEl({src:d.results[b.dataset.i].thumbnail||d.results[b.dataset.i].url}));
+    }catch(e){ st.textContent='Falha na busca (sem internet?).'; }
+  }
+  function syncCtl(){
+    const c=document.getElementById('el-ctl'); if(!c) return; c.classList.toggle('hidden',!sel); if(!sel) return;
+    ['s','rot','op','shadow','blur'].forEach(k=>{ document.getElementById('elc-'+k).value=sel[k]; document.getElementById('elv-'+k).textContent=sel[k]; });
+  }
+  /* Arrastar elementos na arte */
+  let drag=null;
+  const pos=e=>{ const r=studioCanvas.getBoundingClientRect(); return {x:(e.clientX-r.left)*studioCanvas.width/r.width,y:(e.clientY-r.top)*studioCanvas.height/r.height}; };
+  studioCanvas.addEventListener('pointerdown',e=>{
+    const p=pos(e); let h=null; for(let i=elHits.length-1;i>=0;i--){ const r=elHits[i]; if(p.x>=r.x&&p.x<=r.x+r.w&&p.y>=r.y&&p.y<=r.y+r.h){ h=r; break; } }
+    if(!h){ if(sel){ sel=null; syncCtl(); renderStudio(); } return; }
+    sel=h.el; drag={dx:p.x-sel.x,dy:p.y-sel.y}; studioCanvas.setPointerCapture(e.pointerId); switchToolTab('elementos'); syncCtl(); renderStudio(); e.stopImmediatePropagation();
+  },true);
+  studioCanvas.addEventListener('pointermove',e=>{ if(!drag||!sel) return; const p=pos(e); sel.x=p.x-drag.dx; sel.y=p.y-drag.dy; renderStudio(); e.stopImmediatePropagation(); },true);
+  studioCanvas.addEventListener('pointerup',e=>{ if(drag){ drag=null; e.stopImmediatePropagation(); } },true);
+  document.addEventListener('keydown',e=>{ if(e.key==='Delete'&&sel&&!/INPUT|TEXTAREA/.test(document.activeElement.tagName)) document.getElementById('el-del').click(); });
+  editorState.elements=[];
+  buildUI();
+})();
   </script>
 </body>
         </html>
