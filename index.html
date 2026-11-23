@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
+<html lang="pt-BR"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AD Jardim Mariano — Estúdio de Artes</title>
@@ -15,7 +14,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&family=Oswald:wght@500;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Cinzel:wght@600;700;900&amp;family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@600;700;800;900&amp;family=Oswald:wght@500;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&amp;family=Poppins:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
   <style id="app-styles">
     * { box-sizing:border-box; }
     body { background:#111113; color:#f4f4f5; font-family:'Inter',sans-serif; overflow-x:hidden; }
@@ -30,7 +29,7 @@
     .no-scrollbar::-webkit-scrollbar { display:none; }
     .no-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Great+Vibes&family=Lobster&family=Pacifico&family=Permanent+Marker&family=Righteous&display=swap" rel="stylesheet">
+  window.addEventListener('DOMContentLoaded',initApp);.
 </head>
 <body class="min-h-screen flex flex-col selection:bg-amber-500 selection:text-zinc-950">
   <div id="gallery-view" class="flex-1 flex flex-col">
@@ -51,7 +50,7 @@
           <button onclick="openChurchModal()" class="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-xs sm:text-sm font-medium text-zinc-100 transition">
             <svg class="w-4 h-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
             <span>Minha Igreja</span>
-            <span id="church-saved-dot" class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span id="church-saved-dot" class="w-2 h-2 rounded-full bg-emerald-400 hidden"></span>
           </button>
         </div>
       </div>
@@ -114,12 +113,12 @@
           <button onclick="setFormat('story')" data-format="story" class="format-btn flex-1 py-1 rounded text-[11px] font-medium">Stories 9:16</button>
           <button onclick="setFormat('landscape')" data-format="landscape" class="format-btn flex-1 py-1 rounded text-[11px] font-medium">YouTube 16:9</button>
         </div>
-        <div class="grid grid-cols-4 border-b border-zinc-800 bg-[#18181c] shrink-0">
-          <button onclick="switchToolTab('textos')" data-tool="textos" class="tool-tab py-2.5 text-xs font-semibold border-b-2 transition text-amber-400 border-amber-500 bg-[#141417]">Textos</button>
-          <button onclick="switchToolTab('fotos')" data-tool="fotos" class="tool-tab py-2.5 text-xs font-semibold border-b-2 transition text-zinc-400 border-transparent">Fotos &amp; Luz</button>
-          <button onclick="switchToolTab('cores')" data-tool="cores" class="tool-tab py-2.5 text-xs font-semibold border-b-2 transition text-zinc-400 border-transparent">Cores &amp; Luz</button>
-          <button onclick="switchToolTab('selos')" data-tool="selos" class="tool-tab py-2.5 text-xs font-semibold border-b-2 transition text-zinc-400 border-transparent">Selos &amp; Logo</button>
-        </div>
+        <div class="grid border-b border-zinc-800 bg-[#18181c] shrink-0 grid-cols-5">
+          <button onclick="switchToolTab('textos')" data-tool="textos" class="tool-tab py-2.5 font-semibold border-b-2 transition text-amber-400 border-amber-500 bg-[#141417] text-[11px]">Textos</button>
+          <button onclick="switchToolTab('fotos')" data-tool="fotos" class="tool-tab py-2.5 font-semibold border-b-2 transition text-zinc-400 border-transparent text-[11px]">Fotos &amp; Luz</button>
+          <button onclick="switchToolTab('cores')" data-tool="cores" class="tool-tab py-2.5 font-semibold border-b-2 transition text-zinc-400 border-transparent text-[11px]">Cores &amp; Luz</button>
+          <button onclick="switchToolTab('selos')" data-tool="selos" class="tool-tab py-2.5 font-semibold border-b-2 transition text-zinc-400 border-transparent text-[11px]">Selos &amp; Logo</button>
+        <button onclick="switchToolTab('elementos')" data-tool="elementos" class="tool-tab py-2.5 text-[11px] font-semibold border-b-2 transition text-zinc-400 border-transparent">Elementos ✨</button></div>
         <div class="flex-1 overflow-y-auto p-4 space-y-4">
           <div id="panel-textos" class="tool-panel space-y-3.5">
             <div>
@@ -168,7 +167,7 @@
             <div class="bg-zinc-900 border border-zinc-800 p-3 rounded-lg space-y-2">
               <label class="flex items-center justify-between gap-2 text-xs font-medium text-zinc-200 cursor-pointer">
                 <span>✂️ Recortar fundo automaticamente ao enviar foto</span>
-                <input id="chk-auto-cutout" type="checkbox" checked class="rounded bg-zinc-950 border-zinc-700 text-amber-500">
+                <input id="chk-auto-cutout" type="checkbox" checked="" class="rounded bg-zinc-950 border-zinc-700 text-amber-500">
               </label>
               <p class="text-[11px] text-zinc-400">Remove o fundo da foto do pregador na hora e evita aquela "caixa quadrada". Você também pode clicar e arrastar a foto direto na arte!</p>
               <div id="cutout-status" class="hidden text-[11px] text-amber-400 font-medium bg-amber-500/10 border border-amber-500/30 rounded px-2.5 py-1.5"></div>
@@ -245,7 +244,7 @@
               </div>
             </div>
             <div class="pt-3 border-t border-zinc-800 space-y-3">
-              <div class="flex items-center justify-between"><label class="text-[11px] font-semibold uppercase text-zinc-400">Logo da Igreja</label><label class="flex items-center gap-2 text-xs text-zinc-300"><input id="chk-show-logo" type="checkbox" checked class="rounded bg-zinc-950 border-zinc-700 text-amber-500"> Mostrar</label></div>
+              <div class="flex items-center justify-between"><label class="text-[11px] font-semibold uppercase text-zinc-400">Logo da Igreja</label><label class="flex items-center gap-2 text-xs text-zinc-300"><input id="chk-show-logo" type="checkbox" checked="" class="rounded bg-zinc-950 border-zinc-700 text-amber-500"> Mostrar</label></div>
               <div class="flex items-center gap-3 bg-zinc-950 border border-zinc-800 rounded-lg p-3">
                 <div id="editor-logo-preview" class="w-12 h-12 rounded bg-zinc-900 border border-zinc-800 flex items-center justify-center overflow-hidden shrink-0 text-[10px] text-zinc-500">Logo</div>
                 <div class="flex-1 min-w-0">
@@ -260,7 +259,7 @@
             </div>
             <button onclick="resetCurrentTemplate()" class="w-full py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-xs text-zinc-300">Restaurar padrão deste modelo</button>
           </div>
-        </div>
+        <div id="panel-elementos" class="tool-panel hidden space-y-4"><div id="el-suggest"><div class="bg-amber-500/10 border border-amber-500/40 rounded-lg p-2.5 flex items-center justify-between gap-2"><span class="text-[11px] text-amber-200">Sugerido para este modelo: <b>✝️ Páscoa / Ressurreição</b></span><button type="button" data-pack="pascoa" class="shrink-0 px-2.5 py-1 rounded bg-amber-500 text-zinc-950 text-[11px] font-bold">Aplicar</button></div></div><div class="bg-zinc-950 border border-amber-500/40 rounded-lg p-3 space-y-2"><span class="text-xs font-semibold text-amber-400">✨ Gerador de Elementos (PNG sem fundo)</span><div class="flex gap-1.5"><input id="gen-prompt" type="text" placeholder="Ex: coroa de espinhos dourada" class="flex-1 min-w-0 bg-zinc-900 border border-zinc-800 rounded px-2.5 py-1.5 text-xs text-white focus:border-amber-500 focus:outline-none"><button id="gen-go" type="button" class="px-3 py-1.5 rounded bg-amber-500 hover:bg-amber-400 text-zinc-950 text-xs font-bold">Gerar</button></div><div id="gen-ideas" class="flex flex-wrap gap-1"><button type="button" data-idea="coroa de espinhos" class="px-2 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[10px] text-zinc-300 hover:text-white">coroa de espinhos</button><button type="button" data-idea="vinho derramando" class="px-2 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[10px] text-zinc-300 hover:text-white">vinho derramando</button><button type="button" data-idea="cálice dourado brilho" class="px-2 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[10px] text-zinc-300 hover:text-white">cálice dourado brilho</button><button type="button" data-idea="pomba branca" class="px-2 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[10px] text-zinc-300 hover:text-white">pomba branca</button><button type="button" data-idea="balões coloridos" class="px-2 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[10px] text-zinc-300 hover:text-white">balões coloridos</button><button type="button" data-idea="chama de fogo" class="px-2 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[10px] text-zinc-300 hover:text-white">chama de fogo</button><button type="button" data-idea="cruz com raios" class="px-2 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[10px] text-zinc-300 hover:text-white">cruz com raios</button><button type="button" data-idea="estrela dourada" class="px-2 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[10px] text-zinc-300 hover:text-white">estrela dourada</button><button type="button" data-idea="coroa de louros" class="px-2 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[10px] text-zinc-300 hover:text-white">coroa de louros</button><button type="button" data-idea="uvas roxas" class="px-2 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[10px] text-zinc-300 hover:text-white">uvas roxas</button></div><p id="gen-note" class="text-[11px] text-amber-300"></p><div id="gen-results" class="grid grid-cols-4 gap-1.5"></div><div id="gen-actions" class="hidden flex flex-wrap gap-1.5"><button id="gen-use" type="button" class="px-2.5 py-1.5 rounded bg-amber-500 text-zinc-950 text-[11px] font-bold">Usar na arte</button><button id="gen-dl" type="button" class="px-2.5 py-1.5 rounded bg-zinc-800 border border-zinc-700 text-[11px] text-white">Baixar PNG sem fundo</button><button id="gen-more" type="button" class="px-2.5 py-1.5 rounded bg-zinc-900 border border-zinc-700 text-[11px] text-zinc-300">🎲 Mais variações</button></div><p class="text-[10px] text-zinc-500">Gerador inteligente que roda no próprio navegador (sem internet e sem custo). Cada resultado é um PNG com fundo transparente.</p></div><div><label class="block text-[11px] font-semibold uppercase text-zinc-400 mb-2">Pacotes prontos (adiciona vários de uma vez)</label><div id="el-packs" class="grid grid-cols-2 gap-1.5"><button type="button" data-pack="ceia" class="px-2 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-[11px] text-zinc-200 text-left">🍷 Ceia do Senhor</button><button type="button" data-pack="pascoa" class="px-2 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-[11px] text-zinc-200 text-left">✝️ Páscoa / Ressurreição</button><button type="button" data-pack="natal" class="px-2 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-[11px] text-zinc-200 text-left">🎄 Natal</button><button type="button" data-pack="aniversario" class="px-2 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-[11px] text-zinc-200 text-left">🎉 Aniversário / Festa</button><button type="button" data-pack="louvor" class="px-2 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-[11px] text-zinc-200 text-left">🎤 Louvor / Culto</button><button type="button" data-pack="realeza" class="px-2 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-[11px] text-zinc-200 text-left">👑 Realeza / Honra</button></div></div><div class="space-y-2"><div class="flex items-center justify-between"><label class="text-[11px] font-semibold uppercase text-zinc-400">Biblioteca</label><span class="text-[10px] text-amber-400 font-mono" id="el-total">+351.360 variações</span></div><div id="el-cats" class="flex flex-wrap gap-1"><button type="button" data-cat="todos" class="px-2 py-1 rounded text-[11px] border bg-amber-500 text-zinc-950 border-amber-400 font-bold">Todos</button><button type="button" data-cat="ceia" class="px-2 py-1 rounded text-[11px] border bg-zinc-900 border-zinc-800 text-zinc-300">Ceia</button><button type="button" data-cat="realeza" class="px-2 py-1 rounded text-[11px] border bg-zinc-900 border-zinc-800 text-zinc-300">Realeza</button><button type="button" data-cat="luz" class="px-2 py-1 rounded text-[11px] border bg-zinc-900 border-zinc-800 text-zinc-300">Luz &amp; Fogo</button><button type="button" data-cat="natureza" class="px-2 py-1 rounded text-[11px] border bg-zinc-900 border-zinc-800 text-zinc-300">Natureza</button><button type="button" data-cat="festa" class="px-2 py-1 rounded text-[11px] border bg-zinc-900 border-zinc-800 text-zinc-300">Festa</button><button type="button" data-cat="igreja" class="px-2 py-1 rounded text-[11px] border bg-zinc-900 border-zinc-800 text-zinc-300">Igreja</button><button type="button" data-cat="decor" class="px-2 py-1 rounded text-[11px] border bg-zinc-900 border-zinc-800 text-zinc-300">Decoração</button></div><div id="el-grid" class="grid grid-cols-4 gap-1.5 max-h-56 overflow-y-auto pr-0.5"><button type="button" data-shape="calice" title="Cálice" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="vinho" title="Vinho derramando" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="pao" title="Pão" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="uvas" title="Uvas" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="videira" title="Folha de videira" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="coroa-espinhos" title="Coroa de espinhos" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="garrafa" title="Garrafa de vinho" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="respingo" title="Respingo de vinho" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="trigo" title="Trigo" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="vela" title="Vela" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="gota" title="Gota" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="coroa" title="Coroa" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="louros" title="Coroa de louros" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="escudo" title="Escudo" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="floreio" title="Floreio" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="medalha" title="Medalha" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="chave" title="Chave" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="estrela" title="Estrela" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="brilho" title="Brilho / Faísca" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="raios" title="Raios de luz" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="halo" title="Halo" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="chama" title="Chama / Fogo" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="raio" title="Relâmpago" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="cometa" title="Cometa" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="feixe" title="Feixe de luz" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="faiscas" title="Faíscas" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="folha" title="Folha" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="oliveira" title="Ramo de oliveira" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="flor" title="Flor" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="ondas" title="Ondas" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="nuvem" title="Nuvem" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="pomba" title="Pomba" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="sol" title="Sol" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="lua" title="Lua" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="arco-iris" title="Arco-íris" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="balao" title="Balão" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="confete" title="Chuva de confete" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="laco" title="Laço" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="faixa" title="Faixa / Fita" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="fogos" title="Fogos de artifício" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="presente" title="Presente" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="bolo" title="Bolo" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="chapeu" title="Chapéu de festa" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="serpentina" title="Serpentina" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="cruz" title="Cruz" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="biblia" title="Bíblia" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="igreja" title="Igreja" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="sino" title="Sino" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="coracao" title="Coração" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="aliancas" title="Alianças" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="nota" title="Nota musical" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="microfone" title="Microfone" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="pergaminho" title="Pergaminho" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="candelabro" title="Candelabro" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="peixe" title="Peixe (Ichthys)" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="moldura" title="Canto ornamental" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="divisor" title="Divisor" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="seta" title="Seta" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="selo" title="Selo" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="pontos" title="Pontos" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button><button type="button" data-shape="gema" title="Gema / Diamante" class="rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5"><canvas height="84" width="84" style="width: 100%; height: auto;"></canvas></button></div><div><span class="text-[11px] text-zinc-400">Cor</span><div id="el-colors" class="grid grid-cols-8 gap-1 mt-1"><button type="button" data-col="auto" title="Cor automática" class="h-6 rounded text-[9px] font-bold ring-2 ring-amber-400 bg-zinc-800 text-zinc-200 col-span-2">AUTO</button><button type="button" data-col="ouro" title="Ouro" class="h-6 rounded " style="background:linear-gradient(135deg,#fde68a,#e5a93c 55%,#a8741a)"></button><button type="button" data-col="vinho" title="Vinho" class="h-6 rounded " style="background:linear-gradient(135deg,#fb7185,#9f1239 55%,#4c0519)"></button><button type="button" data-col="roxo" title="Roxo Real" class="h-6 rounded " style="background:linear-gradient(135deg,#c4b5fd,#7c3aed 55%,#3b0764)"></button><button type="button" data-col="azul" title="Azul Real" class="h-6 rounded " style="background:linear-gradient(135deg,#93c5fd,#2563eb 55%,#1e3a8a)"></button><button type="button" data-col="vermelho" title="Vermelho" class="h-6 rounded " style="background:linear-gradient(135deg,#fca5a5,#dc2626 55%,#7f1d1d)"></button><button type="button" data-col="verde" title="Verde" class="h-6 rounded " style="background:linear-gradient(135deg,#86efac,#16a34a 55%,#14532d)"></button><button type="button" data-col="branco" title="Branco" class="h-6 rounded " style="background:linear-gradient(135deg,#ffffff,#f8fafc 55%,#94a3b8)"></button><button type="button" data-col="prata" title="Prata" class="h-6 rounded " style="background:linear-gradient(135deg,#f1f5f9,#cbd5e1 55%,#64748b)"></button><button type="button" data-col="laranja" title="Laranja" class="h-6 rounded " style="background:linear-gradient(135deg,#fdba74,#f97316 55%,#9a3412)"></button><button type="button" data-col="rosa" title="Rosa" class="h-6 rounded " style="background:linear-gradient(135deg,#fbcfe8,#ec4899 55%,#9d174d)"></button><button type="button" data-col="turquesa" title="Turquesa" class="h-6 rounded " style="background:linear-gradient(135deg,#99f6e4,#14b8a6 55%,#115e59)"></button><button type="button" data-col="marrom" title="Marrom" class="h-6 rounded " style="background:linear-gradient(135deg,#fcd34d,#b45309 55%,#78350f)"></button><button type="button" data-col="bronze" title="Bronze" class="h-6 rounded " style="background:linear-gradient(135deg,#f3c892,#cd7f32 55%,#7c4a1a)"></button><button type="button" data-col="amarelo" title="Amarelo" class="h-6 rounded " style="background:linear-gradient(135deg,#fef08a,#facc15 55%,#a16207)"></button><button type="button" data-col="preto" title="Preto" class="h-6 rounded " style="background:linear-gradient(135deg,#a1a1aa,#3f3f46 55%,#09090b)"></button><button type="button" data-col="coral" title="Coral" class="h-6 rounded " style="background:linear-gradient(135deg,#fecdd3,#fb7185 55%,#9f1239)"></button><button type="button" data-col="lilas" title="Lilás" class="h-6 rounded " style="background:linear-gradient(135deg,#ddd6fe,#a78bfa 55%,#5b21b6)"></button><button type="button" data-col="esmeralda" title="Esmeralda" class="h-6 rounded " style="background:linear-gradient(135deg,#6ee7b7,#10b981 55%,#065f46)"></button><button type="button" data-col="champanhe" title="Champanhe" class="h-6 rounded " style="background:linear-gradient(135deg,#fffaf0,#f5deb3 55%,#b8860b)"></button><button type="button" data-col="sangue" title="Sangue" class="h-6 rounded " style="background:linear-gradient(135deg,#ef4444,#b91c1c 55%,#450a0a)"></button><button type="button" data-col="ciano" title="Ciano" class="h-6 rounded " style="background:linear-gradient(135deg,#a5f3fc,#06b6d4 55%,#155e75)"></button><button type="button" data-col="indigo" title="Índigo" class="h-6 rounded " style="background:linear-gradient(135deg,#a5b4fc,#4f46e5 55%,#1e1b4b)"></button><button type="button" data-col="tema" title="Cor do Tema" class="h-6 rounded " style="background:linear-gradient(135deg,#fff98c,#e5a93c 55%,#9f6300)"></button><button type="button" data-col="temaClaro" title="Texto do Tema" class="h-6 rounded " style="background:linear-gradient(135deg,#e5a93c,#fafaf9 55%,#a0a09f)"></button></div></div><div><span class="text-[11px] text-zinc-400">Estilo</span><div id="el-styles" class="flex flex-wrap gap-1 mt-1"><button type="button" data-st="solido" class="px-2 py-1 rounded text-[11px] border bg-zinc-900 border-zinc-800 text-zinc-300">Sólido</button><button type="button" data-st="degrade" class="px-2 py-1 rounded text-[11px] border bg-amber-500 text-zinc-950 border-amber-400 font-bold">Degradê</button><button type="button" data-st="brilho" class="px-2 py-1 rounded text-[11px] border bg-zinc-900 border-zinc-800 text-zinc-300">Brilho</button><button type="button" data-st="sombra" class="px-2 py-1 rounded text-[11px] border bg-zinc-900 border-zinc-800 text-zinc-300">Sombra</button><button type="button" data-st="contorno" class="px-2 py-1 rounded text-[11px] border bg-zinc-900 border-zinc-800 text-zinc-300">Contorno</button><button type="button" data-st="vitral" class="px-2 py-1 rounded text-[11px] border bg-zinc-900 border-zinc-800 text-zinc-300">Vitral</button></div></div><div><div class="flex justify-between text-[11px] text-zinc-400 mb-1"><span>Variante</span><span id="val-el-variant" class="font-mono text-amber-400">1/20</span></div><input id="el-variant" type="range" min="1" max="20" value="1" class="w-full h-1.5 bg-zinc-800 rounded-lg"></div><div class="flex items-center justify-between"><label class="flex items-center gap-2 text-xs text-zinc-300"><input id="el-flip" type="checkbox" class="rounded bg-zinc-950 border-zinc-700 text-amber-500"> Espelhar</label><button id="el-random" type="button" class="px-2.5 py-1 rounded bg-zinc-900 border border-zinc-700 text-[11px] text-zinc-200">🎲 Surpreenda-me</button></div></div><div id="el-onart" class="pt-3 border-t border-zinc-800"><div class="flex items-center justify-between mb-1.5"><span class="text-[11px] font-semibold uppercase text-zinc-400">Na arte (0)</span></div><p class="text-[11px] text-zinc-500">Clique em um elemento acima para adicionar. Na arte: arraste para mover, use o quadrado do canto para aumentar e a bolinha de cima para girar.</p></div><div class="pt-3 border-t border-zinc-800 space-y-1.5"><label class="block text-[11px] font-semibold uppercase text-zinc-400">Seu próprio PNG / imagem</label><label class="block text-center py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-xs font-medium text-white cursor-pointer">Enviar imagem como elemento<input id="el-upload" type="file" accept="image/*" class="hidden"></label><p class="text-[10px] text-zinc-500">Dica: depois de enviar, use "Recortar fundo (IA)" para deixar sem fundo.</p></div></div></div>
       </aside>
       <main class="flex-1 stage-grid flex flex-col items-center justify-center p-3 sm:p-6 relative overflow-hidden order-1 lg:order-2 min-h-[42vh]">
         <div id="inline-edit-bar" class="hidden mb-2.5 w-full max-w-2xl bg-[#18181c] border border-amber-500/70 rounded-lg px-3 py-2 shadow-xl flex flex-wrap items-center gap-2 z-10">
@@ -298,7 +297,7 @@
   <div id="code-modal" class="hidden fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4">
     <div class="bg-[#18181c] border border-zinc-700 rounded-xl max-w-2xl w-full p-5 shadow-2xl space-y-3 flex flex-col max-h-[85vh]">
       <div class="flex items-center justify-between"><div><h3 class="font-display font-bold text-base text-white">Código-Fonte Completo</h3><p class="text-xs text-zinc-400">Copie tudo ou baixe o arquivo .html pronto.</p></div><button onclick="closeCodeModal()" class="p-1.5 rounded hover:bg-zinc-800 text-zinc-400">✕</button></div>
-      <textarea id="source-code-area" readonly class="flex-1 min-h-[260px] w-full bg-zinc-950 border border-zinc-800 rounded-lg p-3 font-mono text-[11px] text-zinc-300"></textarea>
+      <textarea id="source-code-area" readonly="" class="flex-1 min-h-[260px] w-full bg-zinc-950 border border-zinc-800 rounded-lg p-3 font-mono text-[11px] text-zinc-300"></textarea>
       <div class="flex items-center justify-between gap-2 pt-1"><span id="copy-feedback" class="text-xs text-emerald-400 font-medium"></span><div class="flex gap-2"><button onclick="downloadHtmlFile()" class="px-3.5 py-2 rounded-lg bg-zinc-800 text-xs font-semibold text-white">Baixar .HTML</button><button onclick="copyFullSourceCode()" class="px-4 py-2 rounded-lg bg-amber-500 text-xs font-bold text-zinc-950">Copiar Tudo</button></div></div>
     </div>
   </div>
@@ -870,8 +869,8 @@ function drawDotGrid(ctx,sx,sy,cols,rows,sp,r,col){ ctx.save(); ctx.fillStyle=co
       }
       if(bgBr !== 100){
         ctx.save();
-        if(bgBr > 100){ ctx.fill= `rgba(255,255,255,${Math.min(0.45,(bgBr-100)/140)})`; ctx.fillRect(0,0,W,H); }
-        else { ctx.fill= `rgba(0,0,0,${Math.min(0.65,(100-bgBr)/80)})`; ctx.fillRect(0,0,W,H); }
+        if(bgBr > 100){ ctx.fillStyle = `rgba(255,255,255,${Math.min(0.45,(bgBr-100)/140)})`; ctx.fillRect(0,0,W,H); }
+        else { ctx.fillStyle = `rgba(0,0,0,${Math.min(0.65,(100-bgBr)/80)})`; ctx.fillRect(0,0,W,H); }
         ctx.restore();
       }
       ctx.save();
@@ -907,7 +906,7 @@ function drawDotGrid(ctx,sx,sy,cols,rows,sp,r,col){ ctx.save(); ctx.fillStyle=co
       if(vig > 0){
         const vg = ctx.createRadialGradient(W*0.5, H*0.46, Math.min(W,H)*0.25, W*0.5, H*0.5, Math.max(W,H)*0.78);
         vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, `rgba(0,0,0,${(vig/100)*0.75})`);
-        ctx.fill= vg; ctx.fillRect(0,0,W,H);
+        ctx.fillStyle = vg; ctx.fillRect(0,0,W,H);
       }
       ctx.restore();
     }
@@ -1408,155 +1407,828 @@ function renderCategoryTabs(){
       restoreDraftIfActive();
     }
     window.addEventListener('DOMContentLoaded',initApp);
-    /* ===== PATCH: ELEMENTOS (estilo Canva) — AD Jardim Mariano ===== */
-(function(){
-  const S=b=>`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">${b}</svg>`;
-  const gr=(id,a,b,v)=>`<linearGradient id="${id}" x1="0" y1="0" x2="${v?0:1}" y2="${v?1:0}"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient>`;
-  const skin='#e8b48a', skin2='#c98d63';
-  const person=(cloth,hair,dx=0,sc=1,woman=false,kid=false)=>{
-    const k=kid?0.62:1;
-    return `<g transform="translate(${dx} ${kid?58:0}) scale(${sc*k})" transform-origin="100 200">
-    ${woman?`<path d="M70 62C66 20 134 20 130 62C136 100 128 118 120 120L80 120C72 118 64 100 70 62Z" fill="${hair}"/>`:''}
-    <path d="M60 200C58 150 70 124 100 120C130 124 142 150 140 200Z" fill="${cloth}"/>
-    <path d="M84 122L100 150L116 122Z" fill="#f5f5f4"/>
-    <rect x="90" y="100" width="20" height="24" rx="8" fill="${skin2}"/>
-    <ellipse cx="100" cy="72" rx="24" ry="29" fill="${skin}"/>
-    ${woman?`<path d="M74 66C80 40 120 40 126 66C116 54 84 54 74 66Z" fill="${hair}"/>`:`<path d="M76 66C74 38 126 38 124 66C116 52 84 52 76 66Z" fill="${hair}"/>`}
-    <circle cx="91" cy="74" r="2.4" fill="#3b2a20"/><circle cx="109" cy="74" r="2.4" fill="#3b2a20"/>
-    <path d="M92 86Q100 93 108 86" stroke="#9a4b3c" stroke-width="2.4" fill="none" stroke-linecap="round"/></g>`;
-  };
-  const wing=`<path d="M100 128C78 108 46 78 14 30C26 62 38 88 60 108C44 98 30 84 18 66C32 104 64 130 100 142Z" fill="url(#dv)" stroke="#d6c28f" stroke-width="1.4"/>
-    <path d="M96 118C74 100 52 78 30 50M96 126C72 112 52 96 34 80" stroke="#d6c28f" stroke-width="1.2" fill="none"/>`;
-  const ELS=[
-    ['Pomba do Espírito Santo','simbolos','pomba espirito santo ad assembleia paz',S(`<defs>${gr('dv','#ffffff','#e9e2cf',1)}</defs><g>${wing}</g><g transform="translate(200 0) scale(-1 1)">${wing}</g><path d="M100 68C114 68 120 82 116 98C113 118 108 144 100 176C92 144 87 118 84 98C80 82 86 68 100 68Z" fill="url(#dv)" stroke="#d6c28f" stroke-width="1.4"/><circle cx="100" cy="62" r="11" fill="#fff" stroke="#d6c28f" stroke-width="1.4"/><path d="M109 60L124 65L109 69Z" fill="#e8923a"/><circle cx="104" cy="60" r="1.8" fill="#222"/><path d="M100 150L86 192L100 180L114 192Z" fill="url(#dv)" stroke="#d6c28f" stroke-width="1.2"/>`)],
-    ['Pomba com ramo de oliveira','simbolos','pomba oliveira paz ramo',S(`<defs>${gr('dv','#ffffff','#e9e2cf',1)}</defs><path d="M30 120C60 70 120 50 160 80C140 90 110 110 80 150C60 160 40 150 30 120Z" fill="url(#dv)" stroke="#d6c28f" stroke-width="2"/><circle cx="154" cy="78" r="12" fill="#fff" stroke="#d6c28f" stroke-width="2"/><path d="M164 76L184 82L164 86Z" fill="#e8923a"/><path d="M184 82C150 120 120 130 90 120" stroke="#5a8a3a" stroke-width="3" fill="none"/><g fill="#6aa84f"><ellipse cx="150" cy="108" rx="9" ry="4" transform="rotate(-30 150 108)"/><ellipse cx="128" cy="120" rx="9" ry="4" transform="rotate(-20 128 120)"/><ellipse cx="108" cy="124" rx="9" ry="4" transform="rotate(10 108 124)"/></g>`)],
-    ['Cruz dourada','simbolos','cruz jesus cristo calvario',S(`<defs>${gr('g1','#fff3b0','#c8932b',1)}</defs><rect x="84" y="14" width="32" height="172" rx="5" fill="url(#g1)" stroke="#8a6215" stroke-width="2"/><rect x="40" y="62" width="120" height="32" rx="5" fill="url(#g1)" stroke="#8a6215" stroke-width="2"/>`)],
-    ['Bíblia aberta','simbolos','biblia livro palavra estudo',S(`<defs>${gr('bb','#fffdf5','#e7dcc0',0)}</defs><path d="M100 54C76 40 44 42 20 54V162C44 150 76 152 100 166C124 152 156 150 180 162V54C156 42 124 40 100 54Z" fill="url(#bb)" stroke="#8a6a3a" stroke-width="3"/><path d="M100 54V166" stroke="#8a6a3a" stroke-width="3"/><g stroke="#b9a77c" stroke-width="2"><path d="M34 76Q64 70 90 80M34 94Q64 88 90 98M34 112Q64 106 90 116M110 80Q136 70 166 76M110 98Q136 88 166 94M110 116Q136 106 166 112"/></g>`)],
-    ['Cálice da Santa Ceia','simbolos','calice ceia vinho santa',S(`<defs>${gr('cc','#fff3b0','#b5812a',1)}</defs><path d="M52 40H148C148 96 124 112 100 116C76 112 52 96 52 40Z" fill="url(#cc)" stroke="#7a5416" stroke-width="3"/><path d="M58 52H142C140 70 134 80 128 86C110 92 90 92 72 86C66 80 60 70 58 52Z" fill="#8b1e2d"/><rect x="94" y="116" width="12" height="44" fill="url(#cc)"/><ellipse cx="100" cy="170" rx="42" ry="10" fill="url(#cc)" stroke="#7a5416" stroke-width="2"/>`)],
-    ['Chama do Espírito','simbolos','fogo chama avivamento espirito',S(`<defs>${gr('fl','#fff176','#e53935',1)}</defs><path d="M100 14C120 54 160 74 150 124C146 160 120 186 100 186C80 186 54 160 50 124C44 90 70 74 78 50C86 64 90 70 100 14Z" fill="url(#fl)"/><path d="M100 84C112 108 128 118 122 142C118 158 108 166 100 166C92 166 82 158 78 142C74 122 92 112 100 84Z" fill="#fff59d"/>`)],
-    ['Coroa','simbolos','coroa rei reino',S(`<defs>${gr('cr','#fff3b0','#c8932b',1)}</defs><path d="M24 150L34 64L72 100L100 48L128 100L166 64L176 150Z" fill="url(#cr)" stroke="#7a5416" stroke-width="3"/><rect x="24" y="150" width="152" height="18" rx="4" fill="url(#cr)" stroke="#7a5416" stroke-width="3"/><g fill="#d32f2f"><circle cx="100" cy="148" r="6"/><circle cx="64" cy="148" r="5"/><circle cx="136" cy="148" r="5"/></g>`)],
-    ['Mãos orando','simbolos','maos orando oracao',S(`<defs>${gr('hn','#f1c9a5','#cf9468',1)}</defs><path d="M100 24C86 50 78 76 78 104L82 150C84 168 94 180 100 184C106 180 116 168 118 150L122 104C122 76 114 50 100 24Z" fill="url(#hn)" stroke="#9a6a45" stroke-width="2.5"/><path d="M100 24V184" stroke="#9a6a45" stroke-width="2"/>`)],
-    ['Raios de luz','efeitos','luz raios brilho holofote',S(`<defs><radialGradient id="rl"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><g fill="url(#rl)">${Array.from({length:12},(_,i)=>`<path d="M100 100L${100+120*Math.cos(i*Math.PI/6-0.1)} ${100+120*Math.sin(i*Math.PI/6-0.1)}L${100+120*Math.cos(i*Math.PI/6+0.1)} ${100+120*Math.sin(i*Math.PI/6+0.1)}Z"/>`).join('')}</g><circle cx="100" cy="100" r="30" fill="url(#rl)"/>`)],
-    ['Brilho (sparkle)','efeitos','brilho estrela sparkle',S(`<path d="M100 10C104 70 130 96 190 100C130 104 104 130 100 190C96 130 70 104 10 100C70 96 96 70 100 10Z" fill="#fff8d6"/>`)],
-    ['Estrela','formas','estrela natal',S(`<defs>${gr('st','#fff3b0','#e0a526',1)}</defs><path d="M100 14L123 74L186 78L137 118L153 180L100 146L47 180L63 118L14 78L77 74Z" fill="url(#st)" stroke="#a97510" stroke-width="2.5"/>`)],
-    ['Coração','formas','coracao amor casal',S(`<defs>${gr('ht','#ff8a8a','#b71c1c',1)}</defs><path d="M100 176C20 120 22 52 66 44C84 41 96 52 100 64C104 52 116 41 134 44C178 52 180 120 100 176Z" fill="url(#ht)"/><ellipse cx="68" cy="66" rx="14" ry="8" fill="#fff" opacity=".35" transform="rotate(-30 68 66)"/>`)],
-    ['Homem de terno','pessoas','homem pessoa pregador pastor terno',S(person('#1f2a44','#2b1d14'))],
-    ['Mulher','pessoas','mulher pessoa pastora cabelo',S(person('#7b2d4e','#3a2216',0,1,true))],
-    ['Jovem','pessoas','jovem pessoa rapaz adolescente',S(person('#2563eb','#4a3020'))],
-    ['Moça jovem','pessoas','moca jovem menina mulher',S(person('#0f766e','#6b3b1e',0,1,true))],
-    ['Criança','pessoas','crianca kids menino menina infantil',S(person('#f59e0b','#3a2216',0,1,false,true))],
-    ['Casal','pessoas','casal casamento marido esposa',S(person('#1f2a44','#2b1d14',-34,0.8)+person('#9d174d','#3a2216',34,0.8,true))],
-    ['Família','pessoas','familia pais filhos pai mae',S(person('#1f2a44','#2b1d14',-52,0.72)+person('#7b2d4e','#3a2216',52,0.72,true)+person('#f59e0b','#3a2216',0,1,false,true))],
-    ['Grupo de pessoas','pessoas','grupo pessoas comunidade igreja',S(person('#2563eb','#2b1d14',-58,0.62)+person('#be185d','#3a2216',58,0.62,true)+person('#16a34a','#4a3020',-22,0.7)+person('#7c3aed','#2b1d14',22,0.7,true))],
-    ['Microfone','objetos','microfone louvor cantor ministracao',S(`<defs>${gr('mc','#9ca3af','#374151',1)}</defs><rect x="76" y="20" width="48" height="86" rx="24" fill="url(#mc)"/><path d="M60 80V100C60 126 78 140 100 140C122 140 140 126 140 100V80" stroke="#374151" stroke-width="8" fill="none"/><rect x="94" y="140" width="12" height="32" fill="#374151"/><rect x="68" y="172" width="64" height="10" rx="5" fill="#374151"/>`)],
-    ['Nota musical','objetos','musica louvor nota coral',S(`<path d="M80 150V50L160 30V130" stroke="#fff" stroke-width="10" fill="none"/><ellipse cx="62" cy="152" rx="24" ry="17" fill="#fff"/><ellipse cx="142" cy="132" rx="24" ry="17" fill="#fff"/>`)],
-    ['Balões','objetos','baloes festa aniversario',S(`<ellipse cx="66" cy="70" rx="34" ry="42" fill="#ef4444"/><ellipse cx="124" cy="58" rx="34" ry="42" fill="#3b82f6"/><ellipse cx="100" cy="94" rx="34" ry="42" fill="#facc15"/><g stroke="#ddd" stroke-width="2" fill="none"><path d="M66 112Q80 150 100 190"/><path d="M124 100Q112 150 100 190"/><path d="M100 136V190"/></g><ellipse cx="54" cy="52" rx="8" ry="12" fill="#fff" opacity=".4"/>`)],
-    ['Bolo de aniversário','objetos','bolo aniversario parabens',S(`<rect x="40" y="110" width="120" height="60" rx="8" fill="#f9a8d4"/><rect x="52" y="76" width="96" height="40" rx="8" fill="#fbcfe8"/><path d="M40 112Q55 130 70 112Q85 130 100 112Q115 130 130 112Q145 130 160 112" fill="#fff"/><g fill="#facc15"><rect x="70" y="50" width="6" height="26"/><rect x="97" y="50" width="6" height="26"/><rect x="124" y="50" width="6" height="26"/></g><g fill="#f97316"><ellipse cx="73" cy="44" rx="5" ry="9"/><ellipse cx="100" cy="44" rx="5" ry="9"/><ellipse cx="127" cy="44" rx="5" ry="9"/></g>`)],
-    ['Presente','objetos','presente caixa gift natal',S(`<rect x="34" y="82" width="132" height="94" rx="6" fill="#dc2626"/><rect x="28" y="58" width="144" height="30" rx="6" fill="#ef4444"/><rect x="92" y="58" width="16" height="118" fill="#facc15"/><path d="M100 58C70 20 40 36 62 56ZM100 58C130 20 160 36 138 56Z" fill="#facc15"/>`)],
-    ['Cordeiro','simbolos','cordeiro ovelha pascoa',S(`<g fill="#fff" stroke="#cfcfcf" stroke-width="2"><circle cx="70" cy="90" r="26"/><circle cx="100" cy="76" r="28"/><circle cx="132" cy="88" r="26"/><circle cx="90" cy="112" r="26"/><circle cx="120" cy="114" r="26"/></g><ellipse cx="44" cy="84" rx="18" ry="22" fill="#3a3a3a"/><rect x="72" y="130" width="8" height="40" fill="#3a3a3a"/><rect x="116" y="130" width="8" height="40" fill="#3a3a3a"/>`)],
-    ['Trigo','simbolos','trigo colheita pao missoes',S(`<g stroke="#a47a1e" stroke-width="3" fill="#e5b73b"><path d="M100 190V60" fill="none"/>${[0,1,2,3,4].map(i=>`<ellipse cx="86" cy="${64+i*16}" rx="8" ry="14" transform="rotate(-25 86 ${64+i*16})"/><ellipse cx="114" cy="${64+i*16}" rx="8" ry="14" transform="rotate(25 114 ${64+i*16})"/>`).join('')}<ellipse cx="100" cy="42" rx="8" ry="16"/></g>`)],
-    ['Peixe (ichthys)','simbolos','peixe ichthys cristao',S(`<path d="M20 100C60 40 120 40 160 100C120 160 60 160 20 100ZM160 100L190 66V134Z" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="round"/>`)],
-    ['Igreja','objetos','igreja templo casa',S(`<rect x="50" y="90" width="100" height="90" fill="#f5f5f4" stroke="#a8a29e" stroke-width="2"/><path d="M40 92L100 54L160 92Z" fill="#b45309"/><rect x="88" y="14" width="24" height="46" fill="#f5f5f4" stroke="#a8a29e" stroke-width="2"/><path d="M100 4V30M90 14H110" stroke="#c8932b" stroke-width="4"/><path d="M84 180V138C84 120 116 120 116 138V180Z" fill="#78350f"/><circle cx="68" cy="116" r="8" fill="#93c5fd"/><circle cx="132" cy="116" r="8" fill="#93c5fd"/>`)],
-    ['Alianças','simbolos','aliancas casamento bodas',S(`<defs>${gr('rg','#fff3b0','#b5812a',1)}</defs><circle cx="76" cy="110" r="42" fill="none" stroke="url(#rg)" stroke-width="12"/><circle cx="126" cy="110" r="42" fill="none" stroke="url(#rg)" stroke-width="12"/><path d="M100 36L112 52L100 66L88 52Z" fill="#bae6fd" stroke="#38bdf8" stroke-width="2"/>`)],
-    ['Flor','formas','flor rosa floral mulheres',S(`<g fill="#f9a8d4" stroke="#ec4899" stroke-width="2">${[0,1,2,3,4,5].map(i=>`<ellipse cx="100" cy="56" rx="22" ry="38" transform="rotate(${i*60} 100 100)"/>`).join('')}</g><circle cx="100" cy="100" r="18" fill="#facc15"/>`)],
-    ['Nuvem','formas','nuvem ceu',S(`<path d="M52 150C20 150 20 106 52 104C54 70 100 60 116 90C140 74 172 96 160 126C184 130 178 150 156 150Z" fill="#fff" opacity=".95"/>`)],
-  ];
-  const state=()=>editorState;
-  const imgCache={};
-  function getImg(el){
-    const k=el.src||el.svg; if(imgCache[k]) return imgCache[k];
-    const im=new Image(); if(el.src) im.crossOrigin='anonymous';
-    im.onload=()=>renderStudio(); im.src=el.src||('data:image/svg+xml;charset=utf-8,'+encodeURIComponent(el.svg));
-    return imgCache[k]=im;
-  }
-  let sel=null, elHits=[], hideSel=false;
-  function drawEls(canvas){
-    elHits=[]; const st=state(); if(!st.elements||!st.elements.length) return; const ctx=canvas.getContext('2d');
-    st.elements.forEach(el=>{
-      const im=getImg(el); if(!im.complete||!im.naturalWidth) return;
-      const w=el.s, h=el.s*im.naturalHeight/im.naturalWidth;
-      ctx.save(); ctx.translate(el.x,el.y); ctx.rotate(el.rot*Math.PI/180); if(el.flip) ctx.scale(-1,1);
-      ctx.globalAlpha=el.op/100;
-      if(el.blur>0 && 'filter' in ctx) ctx.filter=`blur(${el.blur}px)`;
-      if(el.shadow>0){ ctx.shadowColor='rgba(0,0,0,0.55)'; ctx.shadowBlur=el.shadow; ctx.shadowOffsetY=el.shadow*0.4; }
-      ctx.drawImage(im,-w/2,-h/2,w,h); ctx.restore();
-      if(el===sel&&!hideSel){ ctx.save(); ctx.translate(el.x,el.y); ctx.rotate(el.rot*Math.PI/180); ctx.strokeStyle='#e5a93c'; ctx.setLineDash([12,8]); ctx.lineWidth=3; ctx.strokeRect(-w/2,-h/2,w,h); ctx.restore(); }
-      elHits.push({el,x:el.x-w/2,y:el.y-h/2,w,h});
-    });
-  }
-  const _orig=renderArtToCanvas;
-  renderArtToCanvas=function(canvas,tpl,s,hits){ _orig(canvas,tpl,s,hits); if(s===editorState) drawEls(canvas); };
-  const _dl=downloadPNG;
-  downloadPNG=function(){ hideSel=true; renderStudio(); _dl(); hideSel=false; renderStudio(); };
-  function addEl(o){
-    const st=state(); st.elements=st.elements||[]; const W=studioCanvas.width,H=studioCanvas.height;
-    const el=Object.assign({x:W/2,y:H/2,s:Math.round(W*0.28),rot:0,op:100,shadow:18,blur:0,flip:false},o);
-    st.elements.push(el); sel=el; syncCtl(); renderStudio();
-  }
-  /* UI */
-  function buildUI(){
-    const tabs=document.querySelector('.tool-tab').parentElement; tabs.classList.replace('grid-cols-4','grid-cols-5');
-    tabs.insertAdjacentHTML('beforeend','<button onclick="switchToolTab(\'elementos\')" data-tool="elementos" class="tool-tab py-2.5 text-xs font-semibold border-b-2 transition text-zinc-400 border-transparent">Elementos</button>');
-    const host=document.getElementById('panel-textos').parentElement;
-    host.insertAdjacentHTML('beforeend',`<div id="panel-elementos" class="tool-panel hidden space-y-3">
-      <input id="el-search" type="text" placeholder="Pesquisar: pessoa, pomba, cruz, família..." class="w-full bg-zinc-950 border border-zinc-800 focus:border-amber-500 rounded-lg px-3 py-2 text-sm text-white focus:outline-none">
-      <div id="el-grid" class="grid grid-cols-4 gap-1.5 max-h-56 overflow-y-auto"></div>
-      <label class="block text-center py-2 rounded-lg bg-amber-500 text-zinc-950 text-xs font-bold cursor-pointer">Enviar PNG como elemento (ex: logo da pomba AD)<input id="el-upload" type="file" accept="image/*" class="hidden"></label>
-      <div class="pt-2 border-t border-zinc-800 space-y-2">
-        <span class="text-[11px] font-semibold uppercase text-amber-400">Buscar fotos/imagens reais online</span>
-        <div class="flex gap-1.5"><input id="web-q" type="text" placeholder="ex: pregador, família, pomba branca" class="flex-1 bg-zinc-950 border border-zinc-800 rounded px-2 py-1.5 text-xs text-white"><button id="web-go" class="px-3 rounded bg-zinc-800 text-xs text-white">Buscar</button></div>
-        <div id="web-status" class="text-[11px] text-zinc-400"></div>
-        <div id="web-grid" class="grid grid-cols-3 gap-1.5 max-h-48 overflow-y-auto"></div>
-      </div>
-      <div id="el-ctl" class="pt-2 border-t border-zinc-800 space-y-2 hidden">
-        <span class="text-[11px] font-semibold uppercase text-amber-400">Elemento selecionado</span>
-        ${[['s','Tamanho',60,1800],['rot','Girar',-180,180],['op','Opacidade',10,100],['shadow','Sombra',0,60],['blur','Desfoque',0,20]].map(([k,l,a,b])=>`<div><div class="flex justify-between text-[11px] text-zinc-400"><span>${l}</span><span id="elv-${k}" class="font-mono text-amber-400"></span></div><input id="elc-${k}" type="range" min="${a}" max="${b}" class="w-full h-1.5 bg-zinc-800 rounded-lg"></div>`).join('')}
-        <div class="flex gap-1.5"><button id="el-flip" class="flex-1 py-1.5 rounded bg-zinc-800 text-xs text-white">⇄ Espelhar</button><button id="el-front" class="flex-1 py-1.5 rounded bg-zinc-800 text-xs text-white">Frente</button><button id="el-back" class="flex-1 py-1.5 rounded bg-zinc-800 text-xs text-white">Trás</button><button id="el-del" class="flex-1 py-1.5 rounded bg-rose-500/20 text-rose-400 text-xs">Excluir</button></div>
-      </div>
-    </div>`);
-    document.getElementById('el-search').addEventListener('input',e=>renderGrid(e.target.value));
-    document.getElementById('el-upload').addEventListener('change',e=>{ const f=e.target.files[0]; if(!f) return; const r=new FileReader(); r.onload=ev=>addEl({src:ev.target.result}); r.readAsDataURL(f); e.target.value=''; });
-    document.getElementById('web-go').onclick=webSearch; document.getElementById('web-q').addEventListener('keydown',e=>{ if(e.key==='Enter') webSearch(); });
-    ['s','rot','op','shadow','blur'].forEach(k=>document.getElementById('elc-'+k).addEventListener('input',e=>{ if(!sel) return; sel[k]=Number(e.target.value); document.getElementById('elv-'+k).textContent=sel[k]; renderStudio(); }));
-    document.getElementById('el-flip').onclick=()=>{ if(sel){ sel.flip=!sel.flip; renderStudio(); } };
-    const arr=()=>state().elements, mv=to=>{ if(!sel) return; const a=arr(), i=a.indexOf(sel); a.splice(i,1); to?a.push(sel):a.unshift(sel); renderStudio(); };
-    document.getElementById('el-front').onclick=()=>mv(true); document.getElementById('el-back').onclick=()=>mv(false);
-    document.getElementById('el-del').onclick=()=>{ if(!sel) return; state().elements=arr().filter(x=>x!==sel); sel=null; syncCtl(); renderStudio(); };
-    renderGrid('');
-  }
-  function renderGrid(q){
-    const n=normalizeText(q.trim()), list=ELS.filter(e=>!n||n.split(/\s+/).every(t=>normalizeText(e[0]+' '+e[1]+' '+e[2]).includes(t)));
-    const g=document.getElementById('el-grid'); g.innerHTML=list.map((e,i)=>`<button data-i="${ELS.indexOf(e)}" title="${e[0]}" class="bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-amber-500 rounded p-1"><img src="data:image/svg+xml;charset=utf-8,${encodeURIComponent(e[3])}" class="w-full aspect-square object-contain"></button>`).join('')||'<p class="col-span-4 text-xs text-zinc-500">Nada encontrado. Tente a busca online abaixo.</p>';
-    g.querySelectorAll('button').forEach(b=>b.onclick=()=>addEl({svg:ELS[b.dataset.i][3]}));
-  }
-  async function webSearch(){
-    const q=document.getElementById('web-q').value.trim(), st=document.getElementById('web-status'), g=document.getElementById('web-grid'); if(!q) return;
-    st.textContent='Buscando...'; g.innerHTML='';
-    try{
-      const r=await fetch('https://api.openverse.org/v1/images/?page_size=18&license_type=commercial&q='+encodeURIComponent(q)); const d=await r.json();
-      st.textContent=(d.results||[]).length?'Clique para adicionar (confira a licença da imagem).':'Nada encontrado.';
-      g.innerHTML=(d.results||[]).map((x,i)=>`<button data-i="${i}" class="bg-zinc-900 border border-zinc-800 hover:border-amber-500 rounded overflow-hidden"><img src="${x.thumbnail||x.url}" class="w-full aspect-square object-cover"></button>`).join('');
-      g.querySelectorAll('button').forEach(b=>b.onclick=()=>addEl({src:d.results[b.dataset.i].thumbnail||d.results[b.dataset.i].url}));
-    }catch(e){ st.textContent='Falha na busca (sem internet?).'; }
-  }
-  function syncCtl(){
-    const c=document.getElementById('el-ctl'); if(!c) return; c.classList.toggle('hidden',!sel); if(!sel) return;
-    ['s','rot','op','shadow','blur'].forEach(k=>{ document.getElementById('elc-'+k).value=sel[k]; document.getElementById('elv-'+k).textContent=sel[k]; });
-  }
-  /* Arrastar elementos na arte */
-  let drag=null;
-  const pos=e=>{ const r=studioCanvas.getBoundingClientRect(); return {x:(e.clientX-r.left)*studioCanvas.width/r.width,y:(e.clientY-r.top)*studioCanvas.height/r.height}; };
-  studioCanvas.addEventListener('pointerdown',e=>{
-    const p=pos(e); let h=null; for(let i=elHits.length-1;i>=0;i--){ const r=elHits[i]; if(p.x>=r.x&&p.x<=r.x+r.w&&p.y>=r.y&&p.y<=r.y+r.h){ h=r; break; } }
-    if(!h){ if(sel){ sel=null; syncCtl(); renderStudio(); } return; }
-    sel=h.el; drag={dx:p.x-sel.x,dy:p.y-sel.y}; studioCanvas.setPointerCapture(e.pointerId); switchToolTab('elementos'); syncCtl(); renderStudio(); e.stopImmediatePropagation();
-  },true);
-  studioCanvas.addEventListener('pointermove',e=>{ if(!drag||!sel) return; const p=pos(e); sel.x=p.x-drag.dx; sel.y=p.y-drag.dy; renderStudio(); e.stopImmediatePropagation(); },true);
-  studioCanvas.addEventListener('pointerup',e=>{ if(drag){ drag=null; e.stopImmediatePropagation(); } },true);
-  document.addEventListener('keydown',e=>{ if(e.key==='Delete'&&sel&&!/INPUT|TEXTAREA/.test(document.activeElement.tagName)) document.getElementById('el-del').click(); });
-  editorState.elements=[];
-  buildUI();
-})();
   </script>
-</body>
-        </html>
+<!--
+=====================================================================
+ MÓDULO "ELEMENTOS + RECORTE + DOWNLOAD" — AD Jardim Mariano
+ COMO USAR: cole TODO este bloco <script> no seu site, logo ANTES
+ da linha  </body>  (no final do arquivo). Só isso.
+ O que ele faz:
+  1) Nova aba "Elementos ✨" com mais de 350 mil variações
+     (coroa, vinho derramando, cálice, pomba, balões, fogo, etc.)
+  2) Gerador: você digita o que quer e ele cria PNG sem fundo
+  3) Recorte da pessoa muito melhor (IA profissional + acabamento)
+  4) Botão "Baixar PNG" corrigido (baixa de verdade)
+=====================================================================
+-->
+<script id="elementos-studio">
+(function(){
+'use strict';
+if(window.__elementosStudio) return; window.__elementosStudio=true;
+
+const $=id=>document.getElementById(id);
+const TAU=Math.PI*2, VARIANTS=20, WINE='#8b1538';
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const esc=s=>String(s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+const uid=()=>'e'+Date.now().toString(36)+Math.floor(Math.random()*1e5).toString(36);
+
+/* ------------------------------------------------------------------
+   CORES, ESTILOS, CATEGORIAS
+------------------------------------------------------------------ */
+const COLORWAYS=[
+['ouro','Ouro','#e5a93c','#a8741a','#fde68a'],
+['vinho','Vinho','#9f1239','#4c0519','#fb7185'],
+['roxo','Roxo Real','#7c3aed','#3b0764','#c4b5fd'],
+['azul','Azul Real','#2563eb','#1e3a8a','#93c5fd'],
+['vermelho','Vermelho','#dc2626','#7f1d1d','#fca5a5'],
+['verde','Verde','#16a34a','#14532d','#86efac'],
+['branco','Branco','#f8fafc','#94a3b8','#ffffff'],
+['prata','Prata','#cbd5e1','#64748b','#f1f5f9'],
+['laranja','Laranja','#f97316','#9a3412','#fdba74'],
+['rosa','Rosa','#ec4899','#9d174d','#fbcfe8'],
+['turquesa','Turquesa','#14b8a6','#115e59','#99f6e4'],
+['marrom','Marrom','#b45309','#78350f','#fcd34d'],
+['bronze','Bronze','#cd7f32','#7c4a1a','#f3c892'],
+['amarelo','Amarelo','#facc15','#a16207','#fef08a'],
+['preto','Preto','#3f3f46','#09090b','#a1a1aa'],
+['coral','Coral','#fb7185','#9f1239','#fecdd3'],
+['lilas','Lilás','#a78bfa','#5b21b6','#ddd6fe'],
+['esmeralda','Esmeralda','#10b981','#065f46','#6ee7b7'],
+['champanhe','Champanhe','#f5deb3','#b8860b','#fffaf0'],
+['sangue','Sangue','#b91c1c','#450a0a','#ef4444'],
+['ciano','Ciano','#06b6d4','#155e75','#a5f3fc'],
+['indigo','Índigo','#4f46e5','#1e1b4b','#a5b4fc'],
+['tema','Cor do Tema','','',''],
+['temaClaro','Texto do Tema','','','']
+].map(([id,name,a,b,c])=>({id,name,a,b,c}));
+
+const STYLES=[
+ {id:'solido',name:'Sólido'},{id:'degrade',name:'Degradê'},{id:'brilho',name:'Brilho'},
+ {id:'sombra',name:'Sombra'},{id:'contorno',name:'Contorno'},{id:'vitral',name:'Vitral'}
+];
+const CATS=[
+ {id:'todos',name:'Todos'},{id:'ceia',name:'Ceia'},{id:'realeza',name:'Realeza'},{id:'luz',name:'Luz & Fogo'},
+ {id:'natureza',name:'Natureza'},{id:'festa',name:'Festa'},{id:'igreja',name:'Igreja'},{id:'decor',name:'Decoração'}
+];
+
+function mkPal(a,b,c){ return {a,b,c,d:shiftHex(b,-50)}; }
+function getPal(id){
+  const st=(typeof editorState!=='undefined'&&editorState&&editorState.colors)?editorState.colors:{accent:'#e5a93c',text:'#ffffff'};
+  if(id==='tema') return mkPal(st.accent,shiftHex(st.accent,-70),shiftHex(st.accent,80));
+  if(id==='temaClaro') return mkPal(st.text,shiftHex(st.text,-90),st.accent);
+  const cw=COLORWAYS.find(x=>x.id===id)||COLORWAYS[0];
+  return mkPal(cw.a,cw.b,cw.c);
+}
+
+/* ------------------------------------------------------------------
+   PINTURA (aplica o ESTILO escolhido)
+------------------------------------------------------------------ */
+function paintCol(c,col,style,px,lw,noStroke){
+  lw=lw||0.016; c.save(); c.lineJoin='round'; c.lineCap='round';
+  switch(style){
+    case 'contorno': c.fillStyle=rgba(col,0.14); c.fill(); c.strokeStyle=col; c.lineWidth=lw*1.4; c.stroke(); break;
+    case 'degrade': { const g=c.createLinearGradient(-0.25,-0.5,0.25,0.5); g.addColorStop(0,shiftHex(col,70)); g.addColorStop(0.5,col); g.addColorStop(1,shiftHex(col,-80)); c.fillStyle=g; c.fill(); if(!noStroke){ c.strokeStyle=shiftHex(col,-95); c.lineWidth=lw*0.6; c.stroke(); } break; }
+    case 'brilho': c.shadowColor=col; c.shadowBlur=px*0.05; c.fillStyle=col; c.fill(); c.shadowBlur=px*0.1; c.fill(); c.shadowBlur=0; if(!noStroke){ c.strokeStyle=shiftHex(col,80); c.lineWidth=lw*0.5; c.stroke(); } break;
+    case 'sombra': c.shadowColor='rgba(0,0,0,0.55)'; c.shadowBlur=px*0.04; c.shadowOffsetY=px*0.02; c.fillStyle=col; c.fill(); c.shadowColor='transparent'; if(!noStroke){ c.strokeStyle=shiftHex(col,-70); c.lineWidth=lw*0.6; c.stroke(); } break;
+    case 'vitral': c.fillStyle=rgba(col,0.9); c.fill(); if(!noStroke){ c.strokeStyle='rgba(20,12,8,0.9)'; c.lineWidth=lw*1.6; c.stroke(); } break;
+    default: c.fillStyle=col; c.fill(); if(!noStroke){ c.strokeStyle=shiftHex(col,-60); c.lineWidth=lw*0.6; c.stroke(); }
+  }
+  c.restore();
+}
+function strokeCol(c,col,style,px,lw){
+  c.save(); c.lineCap='round'; c.lineJoin='round'; c.strokeStyle=col; c.lineWidth=lw;
+  if(style==='brilho'){ c.shadowColor=col; c.shadowBlur=px*0.05; c.stroke(); c.shadowBlur=px*0.1; }
+  else if(style==='sombra'){ c.shadowColor='rgba(0,0,0,0.5)'; c.shadowBlur=px*0.03; c.shadowOffsetY=px*0.015; }
+  else if(style==='degrade'){ const g=c.createLinearGradient(0,-0.5,0,0.5); g.addColorStop(0,shiftHex(col,55)); g.addColorStop(1,shiftHex(col,-55)); c.strokeStyle=g; }
+  c.stroke(); c.restore();
+}
+
+function hashStr(s){ let h=2166136261; for(let i=0;i<s.length;i++){ h^=s.charCodeAt(i); h=Math.imul(h,16777619); } return h>>>0; }
+function mulberry(seed){ return function(){ seed|=0; seed=seed+0x6D2B79F5|0; let t=Math.imul(seed^seed>>>15,1|seed); t=t+Math.imul(t^t>>>7,61|t)^t; return((t^t>>>14)>>>0)/4294967296; }; }
+
+function makeR(c,pal,style,px,v,sid){
+  const rr=mulberry((v+1)*7919+hashStr(sid));
+  return {
+    v, pal, px, style,
+    f:(a,b)=>a+(b-a)*v/(VARIANTS-1),
+    n:(a,b)=>Math.round(a+(b-a)*v/(VARIANTS-1)),
+    r:()=>rr(),
+    paint:(role,lw,ns)=>paintCol(c,pal[role]||pal.a,style,px,lw,ns),
+    paintC:(hex,lw,ns)=>paintCol(c,hex,style,px,lw,ns),
+    line:(role,lw)=>strokeCol(c,pal[role]||pal.a,style,px,lw||0.02),
+    lineC:(hex,lw)=>strokeCol(c,hex,style,px,lw||0.02)
+  };
+}
+
+/* ------------------------------------------------------------------
+   AUXILIARES DE DESENHO
+------------------------------------------------------------------ */
+function starPath(c,n,ro,ri,rot,cx,cy){ rot=(rot===undefined)?-Math.PI/2:rot; cx=cx||0; cy=cy||0; c.beginPath(); for(let i=0;i<n*2;i++){ const r=i%2?ri:ro, a=rot+i*Math.PI/n, x=cx+Math.cos(a)*r, y=cy+Math.sin(a)*r; i?c.lineTo(x,y):c.moveTo(x,y); } c.closePath(); }
+function poly(c,pts){ c.beginPath(); pts.forEach((p,i)=>i?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1])); c.closePath(); }
+function circ(c,x,y,r){ c.beginPath(); c.arc(x,y,r,0,TAU); }
+function ell(c,x,y,rx,ry,rot){ c.beginPath(); c.ellipse(x,y,rx,ry,rot||0,0,TAU); }
+function smooth(c,pts){ const n=pts.length; c.beginPath(); const m=i=>[(pts[i%n][0]+pts[(i+1)%n][0])/2,(pts[i%n][1]+pts[(i+1)%n][1])/2]; const s=m(n-1); c.moveTo(s[0],s[1]); for(let i=0;i<n;i++){ const e=m(i); c.quadraticCurveTo(pts[i][0],pts[i][1],e[0],e[1]); } c.closePath(); }
+function sparklePath(c,cx,cy,s,p){ c.beginPath(); c.moveTo(cx,cy-s); c.quadraticCurveTo(cx+p*s,cy-p*s,cx+s,cy); c.quadraticCurveTo(cx+p*s,cy+p*s,cx,cy+s); c.quadraticCurveTo(cx-p*s,cy+p*s,cx-s,cy); c.quadraticCurveTo(cx-p*s,cy-p*s,cx,cy-s); c.closePath(); }
+function flamePath(c,cx,cy,s){ c.beginPath(); c.moveTo(cx,cy-.46*s); c.bezierCurveTo(cx+.1*s,cy-.28*s,cx+.3*s,cy-.15*s,cx+.3*s,cy+.08*s); c.bezierCurveTo(cx+.3*s,cy+.3*s,cx+.15*s,cy+.42*s,cx,cy+.42*s); c.bezierCurveTo(cx-.15*s,cy+.42*s,cx-.3*s,cy+.3*s,cx-.3*s,cy+.08*s); c.bezierCurveTo(cx-.3*s,cy-.1*s,cx-.1*s,cy-.2*s,cx,cy-.46*s); c.closePath(); }
+function rr(c,x,y,w,h,r){ roundRectPath(c,x,y,w,h,r); }
+
+/* ------------------------------------------------------------------
+   BIBLIOTECA DE FORMAS (cada uma tem 20 variantes × 24 cores × 6 estilos × espelho)
+------------------------------------------------------------------ */
+const SHAPES=[], SHAPE_BY_ID={};
+function add(id,name,cat,kw,def,draw){ const s={id,name,cat,kw,def,draw}; SHAPES.push(s); SHAPE_BY_ID[id]=s; }
+
+/* ===== CEIA ===== */
+add('calice','Cálice','ceia',['calice','taca','copo','ceia','santa ceia'],'ouro',(c,R)=>{
+  const w=R.f(.3,.42);
+  ell(c,0,.31,.2,.05); R.paint('b');
+  c.beginPath(); c.moveTo(-w,-.38); c.lineTo(w,-.38); c.bezierCurveTo(w,-.02,.1,.1,.04,.14); c.lineTo(.05,.3); c.lineTo(-.05,.3); c.lineTo(-.04,.14); c.bezierCurveTo(-.1,.1,-w,-.02,-w,-.38); c.closePath(); R.paint('a');
+  const k=w*.9; c.beginPath(); c.moveTo(-k,-.3); c.lineTo(k,-.3); c.bezierCurveTo(k,-.1,.06,0,0,.03); c.bezierCurveTo(-.06,0,-k,-.1,-k,-.3); c.closePath(); R.paintC(WINE,.008);
+  circ(c,0,.17,.05); R.paint('c');
+  if(R.v%3===0){ circ(c,0,-.5+.22,.0); }
+});
+add('vinho','Vinho derramando','ceia',['vinho','derramando','derramado','derrama','vertendo','taca derramando'],'ouro',(c,R)=>{
+  const th=.9+R.f(0,.45), tx=-.22, ty=-.2;
+  c.save(); c.translate(tx,ty); c.rotate(th);
+  c.beginPath(); c.moveTo(-.2,-.2); c.lineTo(.2,-.2); c.lineTo(.15,.2); c.quadraticCurveTo(0,.3,-.15,.2); c.closePath(); R.paint('a');
+  c.beginPath(); c.moveTo(-.19,-.17); c.lineTo(.19,-.17); c.lineTo(.17,-.1); c.lineTo(-.17,-.1); c.closePath(); R.paintC(WINE,.006);
+  c.restore();
+  const lx=tx+.2*Math.cos(th)+.2*Math.sin(th), ly=ty+.2*Math.sin(th)-.2*Math.cos(th);
+  c.beginPath(); c.moveTo(lx,ly); c.bezierCurveTo(lx+.08,ly+.05,lx+.1,.15,lx+.1,.33); c.lineTo(lx+.17,.33); c.bezierCurveTo(lx+.16,.14,lx+.14,ly,lx+.03,ly-.02); c.closePath(); R.paintC(WINE,.008);
+  ell(c,lx+.14,.37,.26,.06); R.paintC(WINE,.008);
+  const nd=R.n(2,5); for(let i=0;i<nd;i++){ circ(c,lx+R.r()*.36-.1,.28+R.r()*.1,.014+R.r()*.02); R.paintC(WINE,.004); }
+});
+add('pao','Pão','ceia',['pao','paezinho','ceia','trigo'],'marrom',(c,R)=>{
+  ell(c,0,.06,.42,.22); R.paint('a');
+  const n=R.n(3,5); for(let i=0;i<n;i++){ const x=-.24+i*(.48/(n-1)); c.beginPath(); c.moveTo(x-.05,-.1); c.quadraticCurveTo(x,-.02,x+.05,.06); R.line('b',.022); }
+});
+add('uvas','Uvas','ceia',['uva','uvas','cacho','videira','vinho'],'roxo',(c,R)=>{
+  const rows=R.n(3,5), r=.085;
+  for(let i=0;i<rows;i++){ const cnt=rows-i; for(let j=0;j<cnt;j++){ const x=(j-(cnt-1)/2)*r*1.9, y=-.15+i*r*1.7; circ(c,x,y,r); R.paint('a'); circ(c,x-r*.3,y-r*.3,r*.28); R.paint('c',.002,true); } }
+  c.beginPath(); c.moveTo(0,-.2); c.quadraticCurveTo(.04,-.32,.02,-.42); R.lineC('#78350f',.03);
+  ell(c,.13,-.33,.12,.055,-.5); R.paintC('#16a34a');
+});
+add('videira','Folha de videira','ceia',['videira','folha','parreira','vinha'],'verde',(c,R)=>{
+  starPath(c,5,.46,R.f(.18,.28),-Math.PI/2,0,.02); R.paint('a');
+  for(let i=0;i<5;i++){ const a=-Math.PI/2+i*TAU/5; c.beginPath(); c.moveTo(0,.02); c.lineTo(Math.cos(a)*.36,.02+Math.sin(a)*.36); R.line('b',.012); }
+  c.beginPath(); c.moveTo(0,.2); c.lineTo(0,.46); R.line('b',.025);
+});
+add('coroa-espinhos','Coroa de espinhos','ceia',['coroa de espinhos','espinhos','espinho','coroa espinhos','paixao','sexta santa'],'bronze',(c,R)=>{
+  const nw=R.n(5,9);
+  for(let s=0;s<2;s++){ c.beginPath(); for(let i=0;i<=120;i++){ const t=i/120*TAU, r=.33+Math.sin(t*nw+s*Math.PI)*.035; const x=Math.cos(t)*r*1.15, y=Math.sin(t)*r*.9; i?c.lineTo(x,y):c.moveTo(x,y); } c.closePath(); R.line(s?'b':'a',.045); }
+  const M=R.n(16,28); for(let i=0;i<M;i++){ const t=i/M*TAU+R.r()*.1, t2=t+(R.r()-.5)*.35, rb=.35, rt=.44+R.r()*.04; poly(c,[[Math.cos(t-.035)*rb*1.15,Math.sin(t-.035)*rb*.9],[Math.cos(t+.035)*rb*1.15,Math.sin(t+.035)*rb*.9],[Math.cos(t2)*rt*1.1,Math.sin(t2)*rt*.9]]); R.paint('d',.004); }
+});
+add('garrafa','Garrafa de vinho','ceia',['garrafa','vinho','suco de uva'],'vinho',(c,R)=>{
+  c.beginPath(); c.moveTo(-.1,-.46); c.lineTo(.1,-.46); c.lineTo(.1,-.28); c.bezierCurveTo(.1,-.2,.22,-.16,.22,-.04); c.lineTo(.22,.42); c.quadraticCurveTo(.22,.47,.17,.47); c.lineTo(-.17,.47); c.quadraticCurveTo(-.22,.47,-.22,.42); c.lineTo(-.22,-.04); c.bezierCurveTo(-.22,-.16,-.1,-.2,-.1,-.28); c.closePath(); R.paint('a');
+  rr(c,-.2,.04,.4,.24,.02); R.paint('c'); rr(c,-.11,-.47,.22,.07,.02); R.paint('b');
+  c.beginPath(); c.moveTo(-.12,.12); c.lineTo(.12,.12); c.moveTo(-.12,.2); c.lineTo(.08,.2); R.line('b',.012);
+});
+add('respingo','Respingo de vinho','ceia',['respingo','mancha','vinho','sangue','gota','splash'],'vinho',(c,R)=>{
+  const n=R.n(8,14), pts=[]; for(let i=0;i<n*2;i++){ const a=i/(n*2)*TAU, r=(i%2?.17:.3)*(.85+R.r()*.3); pts.push([Math.cos(a)*r,Math.sin(a)*r]); }
+  smooth(c,pts); R.paint('a');
+  const m=R.n(5,10); for(let i=0;i<m;i++){ const a=R.r()*TAU, r=.36+R.r()*.1; circ(c,Math.cos(a)*r,Math.sin(a)*r,.02+R.r()*.025); R.paint('a',.004); }
+});
+add('trigo','Trigo','ceia',['trigo','espiga','pao','colheita'],'amarelo',(c,R)=>{
+  c.beginPath(); c.moveTo(0,.46); c.quadraticCurveTo(.04,.1,0,-.3); R.line('b',.02);
+  const k=R.n(5,9); for(let i=0;i<k;i++){ const y=.28-i*(.56/k); ell(c,-.075,y,.1,.04,-.6); R.paint('a',.006); ell(c,.075,y,.1,.04,.6); R.paint('a',.006); }
+  ell(c,0,-.38,.04,.1); R.paint('a',.006);
+});
+add('vela','Vela','ceia',['vela','candeia','luz','oracao'],'branco',(c,R)=>{
+  rr(c,-.1,-.1,.2,.52,.03); R.paint('a'); ell(c,0,-.1,.1,.03); R.paint('c');
+  c.beginPath(); c.moveTo(0,-.1); c.lineTo(0,-.16); R.lineC('#27272a',.012);
+  flamePath(c,0,-.3,.34); R.paintC('#f59e0b',.006); flamePath(c,0,-.26,.18); R.paintC('#fde68a',.004,true);
+});
+add('gota','Gota','ceia',['gota','sangue','lagrima','agua','unção','oleo'],'vinho',(c,R)=>{
+  c.beginPath(); c.moveTo(0,-.45); c.bezierCurveTo(.08,-.25,.3,-.05,.3,.15); c.arc(0,.15,.3,0,Math.PI,false); c.bezierCurveTo(-.3,-.05,-.08,-.25,0,-.45); c.closePath(); R.paint('a');
+  c.save(); c.globalAlpha=.5; ell(c,-.12,.1,.05,.1,.4); R.paintC('#ffffff',.001,true); c.restore();
+});
+
+/* ===== REALEZA ===== */
+add('coroa','Coroa','realeza',['coroa','rei','realeza','coroa dourada','principe','rainha'],'ouro',(c,R)=>{
+  const n=R.n(3,7), pts=[[-.4,.3],[-.4,-.12]];
+  for(let i=0;i<n;i++){ const px=-.4+(i+.5)*(.8/n), vx=-.4+(i+1)*(.8/n), mid=1-Math.abs(i-(n-1)/2)/(n/2); pts.push([px,-.3-.12*mid]); pts.push([vx,i===n-1?-.12:-.08]); }
+  pts.push([.4,.3]); poly(c,pts); R.paint('a');
+  rr(c,-.4,.1,.8,.2,.02); R.paint('b');
+  for(let i=0;i<n;i++){ const px=-.4+(i+.5)*(.8/n), mid=1-Math.abs(i-(n-1)/2)/(n/2); circ(c,px,-.3-.12*mid,.035); R.paint('c',.006); }
+  const gem=['#ef4444','#3b82f6','#10b981']; for(let i=0;i<3;i++){ circ(c,(i-1)*.22,.2,.04); R.paintC(gem[i],.006); }
+});
+add('louros','Coroa de louros','realeza',['louros','louro','vitoria','coroa de louros','ramos','vencedor'],'ouro',(c,R)=>{
+  for(const s of [-1,1]){ c.save(); c.scale(s,1);
+    c.beginPath(); c.arc(0,0,.38,Math.PI*.5,Math.PI*1.5,false); R.line('b',.015);
+    const n=R.n(7,11); for(let i=0;i<n;i++){ const t=i/(n-1), phi=Math.PI*(.55+.85*t), px=Math.cos(phi)*.38, py=Math.sin(phi)*.38, tg=phi+Math.PI/2;
+      ell(c,px+Math.cos(phi)*.04,py+Math.sin(phi)*.04,.11,.04,tg-.5); R.paint('a',.006);
+      ell(c,px-Math.cos(phi)*.05,py-Math.sin(phi)*.05,.1,.036,tg+.5); R.paint('a',.006); }
+    c.restore(); }
+});
+add('escudo','Escudo','realeza',['escudo','armadura','protecao','defesa','fe'],'azul',(c,R)=>{
+  const sh=()=>{ c.beginPath(); c.moveTo(-.34,-.4); c.lineTo(.34,-.4); c.lineTo(.34,0); c.bezierCurveTo(.34,.25,.15,.38,0,.46); c.bezierCurveTo(-.15,.38,-.34,.25,-.34,0); c.closePath(); };
+  sh(); R.paint('a'); c.save(); c.scale(.8,.8); c.translate(0,.02); sh(); R.paint('b'); c.restore();
+  starPath(c,R.n(5,7),.16,.07,-Math.PI/2,0,-.02); R.paint('c');
+});
+add('floreio','Floreio','realeza',['floreio','ornamento','adorno','arabesco','enfeite'],'ouro',(c,R)=>{
+  for(const s of [-1,1]){ c.save(); c.scale(s,1);
+    c.beginPath(); c.moveTo(.03,0); c.bezierCurveTo(.12,-.2,.38,-.18,.36,0); c.bezierCurveTo(.34,.12,.2,.1,.22,.02); R.line('a',.025);
+    c.beginPath(); c.moveTo(.05,.02); c.bezierCurveTo(.2,.2+R.f(0,.1),.42,.22,.46,.05); R.line('b',.02); c.restore(); }
+  poly(c,[[0,-.08],[.06,0],[0,.08],[-.06,0]]); R.paint('c');
+});
+add('medalha','Medalha','realeza',['medalha','premio','honra','trofeu','condecoracao'],'ouro',(c,R)=>{
+  poly(c,[[-.24,.12],[-.04,.2],[-.1,.48],[-.18,.38],[-.28,.44]]); R.paint('b');
+  poly(c,[[.24,.12],[.04,.2],[.1,.48],[.18,.38],[.28,.44]]); R.paint('b');
+  circ(c,0,-.08,.3); R.paint('a'); circ(c,0,-.08,.22); R.paint('c');
+  starPath(c,R.n(5,8),.14,.06,-Math.PI/2,0,-.08); R.paint('b');
+});
+add('chave','Chave','realeza',['chave','reino','chaves do reino','portal','acesso'],'ouro',(c,R)=>{
+  circ(c,-.26,0,.12); R.line('a',.07); rr(c,-.14,-.03,.6,.06,.02); R.paint('a'); rr(c,.3,.03,.06,.12,.01); R.paint('a'); rr(c,.4,.03,.06,.09,.01); R.paint('a');
+});
+
+/* ===== LUZ & FOGO ===== */
+add('estrela','Estrela','luz',['estrela','star','natal','belem','brilho'],'ouro',(c,R)=>{
+  const n=R.n(5,8); starPath(c,n,.46,.46*R.f(.38,.55)); R.paint('a'); starPath(c,n,.26,.12); R.paint('c',.008);
+});
+add('brilho','Brilho / Faísca','luz',['brilho','faisca','cintilante','brilhante','sparkle','reluzente'],'branco',(c,R)=>{
+  const p=R.f(.02,.09); sparklePath(c,0,0,.45,p); R.paint('a');
+  c.save(); sparklePath(c,.3,-.3,.16,p); R.paint('c',.006); sparklePath(c,-.3,.3,.13,p); R.paint('c',.006); c.restore();
+});
+add('raios','Raios de luz','luz',['raios','sol','luz','explosao','sunburst','glória','gloria'],'ouro',(c,R)=>{
+  const n=R.n(10,24); c.beginPath(); for(let i=0;i<n;i++){ const a0=i*TAU/n, a1=a0+TAU/n*.5; c.moveTo(0,0); c.lineTo(Math.cos(a0)*.5,Math.sin(a0)*.5); c.lineTo(Math.cos(a1)*.5,Math.sin(a1)*.5); c.closePath(); } R.paint('a',.004,true);
+  circ(c,0,0,.12); R.paint('c');
+});
+add('halo','Halo','luz',['halo','aureola','anel','luz','glória'],'ouro',(c,R)=>{
+  ell(c,0,0,.4,R.f(.1,.18)); R.line('a',.035); ell(c,0,0,.34,R.f(.07,.13)); R.line('c',.012);
+});
+add('chama','Chama / Fogo','luz',['chama','fogo','avivamento','espirito santo','labareda','fogueira'],'laranja',(c,R)=>{
+  c.save(); c.rotate(R.f(-.15,.15)); flamePath(c,0,0,1); R.paint('a'); flamePath(c,0,.15,.55); R.paintC('#fde047',.006,true); c.restore();
+});
+add('raio','Relâmpago','luz',['raio','relampago','poder','trovao','energia'],'amarelo',(c,R)=>{
+  poly(c,[[.12,-.46],[-.18,.05],[-.02,.05],[-.12,.46],[.2,-.08],[.03,-.08],[.16,-.46]]); R.paint('a');
+});
+add('cometa','Cometa','luz',['cometa','meteoro','estrela cadente'],'ouro',(c,R)=>{
+  c.save(); c.globalAlpha=.75; c.beginPath(); c.moveTo(.22,-.3); c.quadraticCurveTo(-.1,-.1+R.f(0,.15),-.46,.42); c.quadraticCurveTo(0,.1,.32,-.2); c.closePath(); R.paint('b',.004,true); c.restore();
+  circ(c,.27,-.25,.14); R.paint('a'); starPath(c,5,.07,.03,-Math.PI/2,.27,-.25); R.paint('c',.004);
+});
+add('feixe','Feixe de luz','luz',['feixe','holofote','spotlight','luz','palco','raio de luz'],'ouro',(c,R)=>{
+  const g=c.createLinearGradient(0,-.5,0,.5); g.addColorStop(0,rgba(R.pal.a,.9)); g.addColorStop(1,rgba(R.pal.a,0));
+  c.fillStyle=g; const b=R.f(.3,.5); poly(c,[[-.06,-.5],[.06,-.5],[b,.5],[-b,.5]]); c.fill();
+});
+add('faiscas','Faíscas','luz',['faiscas','fagulhas','particulas','brasas','confete de luz','glitter'],'ouro',(c,R)=>{
+  const n=R.n(6,12); for(let i=0;i<n;i++){ const x=(R.r()-.5)*.85, y=(R.r()-.5)*.85, s=.03+R.r()*.07; if(i%2){ sparklePath(c,x,y,s*1.6,.12); } else { circ(c,x,y,s*.6); } R.paint(i%3?'a':'c',.005); }
+});
+
+/* ===== NATUREZA ===== */
+add('folha','Folha','natureza',['folha','planta','verde','natureza'],'verde',(c,R)=>{
+  c.save(); c.rotate(R.f(-.5,.5)); c.beginPath(); c.moveTo(0,.45); c.bezierCurveTo(-.4,.2,-.35,-.25,0,-.46); c.bezierCurveTo(.35,-.25,.4,.2,0,.45); c.closePath(); R.paint('a');
+  c.beginPath(); c.moveTo(0,.45); c.lineTo(0,-.4); R.line('b',.014);
+  const n=R.n(3,5); for(let i=1;i<=n;i++){ const y=.35-i*(.7/(n+1)); c.beginPath(); c.moveTo(0,y); c.lineTo(-.2,y-.1); c.moveTo(0,y); c.lineTo(.2,y-.1); R.line('b',.008); } c.restore();
+});
+add('oliveira','Ramo de oliveira','natureza',['oliveira','ramo','paz','azeitona','ramo de oliveira'],'verde',(c,R)=>{
+  const P0=[-.4,.38],P1=[0,.2],P2=[.4,-.3];
+  c.beginPath(); c.moveTo(P0[0],P0[1]); c.quadraticCurveTo(P1[0],P1[1],P2[0],P2[1]); R.line('b',.02);
+  const n=R.n(6,10); for(let i=1;i<=n;i++){ const t=i/(n+1), x=(1-t)*(1-t)*P0[0]+2*(1-t)*t*P1[0]+t*t*P2[0], y=(1-t)*(1-t)*P0[1]+2*(1-t)*t*P1[1]+t*t*P2[1];
+    const dx=2*(1-t)*(P1[0]-P0[0])+2*t*(P2[0]-P1[0]), dy=2*(1-t)*(P1[1]-P0[1])+2*t*(P2[1]-P1[1]), ang=Math.atan2(dy,dx);
+    ell(c,x+Math.cos(ang-1.4)*.06,y+Math.sin(ang-1.4)*.06,.1,.035,ang-.7); R.paint('a',.005);
+    ell(c,x+Math.cos(ang+1.4)*.06,y+Math.sin(ang+1.4)*.06,.1,.035,ang+.7); R.paint('a',.005); }
+  circ(c,.2,-.02,.035); R.paint('c',.004);
+});
+add('flor','Flor','natureza',['flor','rosa','petalas','jardim','margarida','lirio'],'rosa',(c,R)=>{
+  const n=R.n(5,12); for(let i=0;i<n;i++){ const a=i*TAU/n; ell(c,Math.cos(a)*.2,Math.sin(a)*.2,.2,R.f(.07,.11),a); R.paint('a',.006); }
+  circ(c,0,0,.1); R.paint('c');
+});
+add('ondas','Ondas','natureza',['onda','ondas','mar','agua','batismo','rio'],'azul',(c,R)=>{
+  for(let k=0;k<3;k++){ c.beginPath(); for(let x=-.45;x<=.451;x+=.02){ const y=-.2+k*.2+Math.sin(x*R.f(8,16)+k)*.06; x<=-.449?c.moveTo(x,y):c.lineTo(x,y); } R.line(k%2?'c':'a',.045); }
+});
+add('nuvem','Nuvem','natureza',['nuvem','ceu','nuvens','clima'],'branco',(c,R)=>{
+  const o=R.f(-.03,.03); c.beginPath(); [[-.25,.1,.16],[-.05,-.05+o,.22],[.2,.02,.19],[.32,.12,.12],[-.12,.15,.2],[.1,.15,.2]].forEach(([x,y,r])=>{ c.moveTo(x+r,y); c.arc(x,y,r,0,TAU); }); R.paint('a',.01,true);
+});
+add('pomba','Pomba','natureza',['pomba','espirito santo','paz','ave','passaro','dove'],'branco',(c,R)=>{
+  c.save(); c.scale(1,1);
+  poly(c,[[-.25,.08],[-.48,.2],[-.45,.05],[-.5,-.02]]); R.paint('a');
+  ell(c,0,.05,.28,.14,-.15); R.paint('a'); circ(c,.28,-.1,.09); R.paint('a');
+  poly(c,[[.36,-.11],[.46,-.07],[.36,-.05]]); R.paintC('#f59e0b',.005);
+  c.beginPath(); c.moveTo(-.05,0); c.bezierCurveTo(-.1,-.35,.1,-.5,.3,-.42); c.bezierCurveTo(.2,-.25,.15,-.1,.1,0); c.closePath(); R.paint('c');
+  circ(c,.3,-.12,.012); R.paintC('#18181b',.002,true);
+  if(R.v>=10){ ell(c,.42,-.02,.06,.025,.6); R.paintC('#16a34a',.004); }
+  c.restore();
+});
+add('sol','Sol','natureza',['sol','dia','manha','calor','verao'],'amarelo',(c,R)=>{
+  const n=R.n(8,16); for(let i=0;i<n;i++){ const a=i*TAU/n; poly(c,[[Math.cos(a-.1)*.3,Math.sin(a-.1)*.3],[Math.cos(a)*.48,Math.sin(a)*.48],[Math.cos(a+.1)*.3,Math.sin(a+.1)*.3]]); R.paint('a',.006); }
+  circ(c,0,0,.24); R.paint('c');
+});
+add('lua','Lua','natureza',['lua','noite','crescente','madrugada'],'champanhe',(c,R)=>{
+  const Ro=.42, r=.36, d=R.f(.14,.22), x0=(Ro*Ro-r*r+d*d)/(2*d), y0=Math.sqrt(Math.max(0.0001,Ro*Ro-x0*x0)), al=Math.atan2(y0,x0), a2=Math.atan2(y0,x0-d);
+  c.beginPath(); c.moveTo(x0,-y0); c.arc(0,0,Ro,-al,al,true); c.arc(d,0,r,a2,-a2,false); c.closePath(); R.paint('a');
+  starPath(c,5,.07,.03,-Math.PI/2,.22,-.18); R.paint('c',.004);
+});
+add('arco-iris','Arco-íris','natureza',['arco-iris','arco iris','alianca','promessa','noe'],'ouro',(c,R)=>{
+  ['#ef4444','#f97316','#facc15','#22c55e','#3b82f6'].forEach((col,i)=>{ c.beginPath(); c.arc(0,.2,.4-i*.06,Math.PI,0); R.lineC(col,.05); });
+});
+
+/* ===== FESTA ===== */
+add('balao','Balão','festa',['balao','baloes','festa','aniversario','bexiga'],'vermelho',(c,R)=>{
+  c.save(); c.rotate(R.f(-.25,.25)); ell(c,0,-.1,.28,.34); R.paint('a'); poly(c,[[-.05,.3],[.05,.3],[0,.23]]); R.paint('a',.005);
+  c.beginPath(); c.moveTo(0,.3); c.bezierCurveTo(-.1,.35,.1,.42,0,.48); R.lineC('#d4d4d8',.008);
+  c.save(); c.globalAlpha=.45; ell(c,-.1,-.2,.05,.1,.4); R.paintC('#ffffff',.001,true); c.restore(); c.restore();
+});
+add('confete','Chuva de confete','festa',['confete','confetes','festa','chuva','comemoracao'],'ouro',(c,R)=>{
+  const cols=[R.pal.a,R.pal.b,R.pal.c,'#f472b6','#38bdf8','#facc15','#34d399']; const n=R.n(26,48);
+  for(let i=0;i<n;i++){ c.save(); c.translate((R.r()-.5)*.92,(R.r()-.5)*.92); c.rotate(R.r()*TAU); c.fillStyle=cols[i%cols.length]; if(i%3===0){ c.beginPath(); c.arc(0,0,.012+R.r()*.014,0,TAU); c.fill(); } else c.fillRect(-.02,-.008,.04+R.r()*.02,.016); c.restore(); }
+});
+add('laco','Laço','festa',['laco','fita','presente','enfeite','bow'],'vermelho',(c,R)=>{
+  poly(c,[[-.02,.05],[-.22,.46],[-.12,.4],[-.03,.47]]); R.paint('b'); poly(c,[[.02,.05],[.22,.46],[.12,.4],[.03,.47]]); R.paint('b');
+  c.beginPath(); c.moveTo(0,0); c.bezierCurveTo(-.15,-.3,-.45,-.28,-.43,0); c.bezierCurveTo(-.45,.28,-.15,.3,0,0); c.closePath(); R.paint('a');
+  c.beginPath(); c.moveTo(0,0); c.bezierCurveTo(.15,-.3,.45,-.28,.43,0); c.bezierCurveTo(.45,.28,.15,.3,0,0); c.closePath(); R.paint('a');
+  rr(c,-.07,-.08,.14,.16,.04); R.paint('c');
+});
+add('faixa','Faixa / Fita','festa',['faixa','fita','banner','titulo','ribbon'],'vermelho',(c,R)=>{
+  poly(c,[[-.36,-.04],[-.5,-.04],[-.44,.06],[-.5,.16],[-.36,.16]]); R.paint('b'); poly(c,[[.36,-.04],[.5,-.04],[.44,.06],[.5,.16],[.36,.16]]); R.paint('b');
+  rr(c,-.36,-.14,.72,.28,.01); R.paint('a');
+});
+add('fogos','Fogos de artifício','festa',['fogos','fogo de artificio','explosao','ano novo','virada','celebracao'],'ouro',(c,R)=>{
+  const n=R.n(12,24); for(let i=0;i<n;i++){ const a=i*TAU/n, r2=.3+(i%2)*.14; c.beginPath(); c.moveTo(Math.cos(a)*.1,Math.sin(a)*.1); c.lineTo(Math.cos(a)*r2,Math.sin(a)*r2); R.line(i%2?'c':'a',.018); circ(c,Math.cos(a)*(r2+.03),Math.sin(a)*(r2+.03),.018); R.paint('c',.004); }
+  circ(c,0,0,.04); R.paint('a');
+});
+add('presente','Presente','festa',['presente','caixa','surpresa','natal','aniversario'],'vermelho',(c,R)=>{
+  rr(c,-.34,-.12,.68,.5,.02); R.paint('a'); rr(c,-.4,-.24,.8,.14,.02); R.paint('b'); rr(c,-.05,-.24,.1,.62,.01); R.paint('c');
+  ell(c,-.12,-.33,.11,.06,-.5); R.paint('c'); ell(c,.12,-.33,.11,.06,.5); R.paint('c');
+});
+add('bolo','Bolo','festa',['bolo','aniversario','parabens','vela','festa'],'rosa',(c,R)=>{
+  rr(c,-.38,.05,.76,.34,.04); R.paint('a'); rr(c,-.28,-.18,.56,.24,.04); R.paint('b');
+  c.beginPath(); for(let x=-.28;x<=.281;x+=.02){ const y=-.18+Math.sin(x*30)*.025; x<=-.279?c.moveTo(x,y):c.lineTo(x,y); } R.line('c',.03);
+  for(let i=-1;i<=1;i++){ rr(c,i*.14-.015,-.34,.03,.16,.01); R.paintC('#ffffff',.004); ell(c,i*.14,-.37,.02,.035); R.paintC('#fbbf24',.003); }
+});
+add('chapeu','Chapéu de festa','festa',['chapeu','festa','aniversario','cone'],'roxo',(c,R)=>{
+  ell(c,0,.4,.3,.05); R.paint('b'); poly(c,[[0,-.4],[.3,.4],[-.3,.4]]); R.paint('a');
+  c.save(); poly(c,[[0,-.4],[.3,.4],[-.3,.4]]); c.clip(); for(let i=0;i<3;i++){ c.beginPath(); c.moveTo(-.4,-.0+i*.2); c.lineTo(.4,-.2+i*.2); R.line('c',.03); } c.restore();
+  circ(c,0,-.42,.07); R.paint('c');
+});
+add('serpentina','Serpentina','festa',['serpentina','fita','festa','carnaval'],'rosa',(c,R)=>{
+  const f=R.f(1.5,3); for(let k=0;k<2;k++){ c.beginPath(); for(let t=0;t<=1.001;t+=.01){ const x=-.42+.84*t, y=Math.sin(t*TAU*f+k*1.2)*.25; t<=0?c.moveTo(x,y):c.lineTo(x,y); } R.line(k?'c':'a',.04); }
+});
+
+/* ===== IGREJA ===== */
+add('cruz','Cruz','igreja',['cruz','calvario','cristo','ressurreicao','pascoa','crucifixo'],'ouro',(c,R)=>{
+  if(R.v>=7&&R.v<14){ const n=16; for(let i=0;i<n;i++){ const a=i*TAU/n; c.beginPath(); c.moveTo(Math.cos(a)*.2,-.13+Math.sin(a)*.2); c.lineTo(Math.cos(a)*.48,-.13+Math.sin(a)*.48); R.line('c',.015); } }
+  poly(c,[[-.07,-.46],[.07,-.46],[.07,-.2],[.3,-.2],[.3,-.06],[.07,-.06],[.07,.46],[-.07,.46],[-.07,-.06],[-.3,-.06],[-.3,-.2],[-.07,-.2]]); R.paint('a');
+  if(R.v>=14){ [[0,-.46],[0,.46],[-.3,-.13],[.3,-.13]].forEach(([x,y])=>{ circ(c,x,y,.045); R.paint('c',.005); }); }
+});
+add('biblia','Bíblia','igreja',['biblia','livro','palavra','escritura','evangelho'],'marrom',(c,R)=>{
+  poly(c,[[-.5,-.28],[0,-.18],[.5,-.28],[.5,.36],[0,.46],[-.5,.36]]); R.paint('b');
+  poly(c,[[-.46,-.3],[-.02,-.22],[-.02,.38],[-.46,.3]]); R.paint('c'); poly(c,[[.46,-.3],[.02,-.22],[.02,.38],[.46,.3]]); R.paint('c');
+  for(let i=0;i<5;i++){ c.beginPath(); c.moveTo(-.4,-.18+i*.1); c.lineTo(-.1,-.12+i*.1); c.moveTo(.4,-.18+i*.1); c.lineTo(.1,-.12+i*.1); R.lineC('#78350f',.008); }
+  c.beginPath(); c.moveTo(0,-.2); c.lineTo(0,.42); R.line('b',.012);
+});
+add('igreja','Igreja','igreja',['igreja','templo','casa de oracao','capela','santuario'],'champanhe',(c,R)=>{
+  rr(c,-.3,-.02,.6,.44,.01); R.paint('a'); poly(c,[[-.36,-.02],[0,-.28],[.36,-.02]]); R.paint('b');
+  rr(c,-.06,-.42,.12,.16,.01); R.paint('a'); poly(c,[[-.09,-.42],[0,-.5],[.09,-.42]]); R.paint('b');
+  archPath(c,-.07,.18,.14,.24); R.paint('d'); circ(c,-.2,.1,.045); R.paint('c'); circ(c,.2,.1,.045); R.paint('c');
+});
+add('sino','Sino','igreja',['sino','chamado','natal','sinos','culto'],'ouro',(c,R)=>{
+  c.beginPath(); c.moveTo(-.4,.3); c.bezierCurveTo(-.3,.25,-.26,.05,-.24,-.12); c.bezierCurveTo(-.22,-.36,.22,-.36,.24,-.12); c.bezierCurveTo(.26,.05,.3,.25,.4,.3); c.closePath(); R.paint('a');
+  rr(c,-.42,.28,.84,.06,.03); R.paint('b'); circ(c,0,.4,.06); R.paint('b'); circ(c,0,-.38,.04); R.paint('c',.005);
+});
+add('coracao','Coração','igreja',['coracao','amor','casal','namoro','casamento'],'vermelho',(c,R)=>{
+  c.beginPath(); c.moveTo(0,.42); c.bezierCurveTo(-.52,.02,-.46,-.42,0,-.14); c.bezierCurveTo(.46,-.42,.52,.02,0,.42); c.closePath(); R.paint('a');
+  c.save(); c.globalAlpha=.45; ell(c,-.2,-.15,.07,.12,.7); R.paintC('#ffffff',.001,true); c.restore();
+});
+add('aliancas','Alianças','igreja',['alianca','aliancas','casamento','noivos','casal','bodas'],'ouro',(c,R)=>{
+  circ(c,-.15,0,.22); R.line('a',.07); circ(c,.15,0,.22); R.line('b',.07); poly(c,[[0,-.34],[.06,-.28],[0,-.22],[-.06,-.28]]); R.paintC('#bfdbfe',.005);
+});
+add('nota','Nota musical','igreja',['nota','musica','louvor','adoracao','cantico','coral'],'ouro',(c,R)=>{
+  ell(c,-.12,.28,.14,.1,-.4); R.paint('a'); rr(c,0,-.38,.045,.68,.01); R.paint('a');
+  c.beginPath(); c.moveTo(.045,-.38); c.bezierCurveTo(.25,-.3,.3,-.1,.2,.02); c.bezierCurveTo(.28,-.12,.2,-.2,.045,-.2); c.closePath(); R.paint('a');
+  if(R.v>=10){ ell(c,.26,.2,.12,.09,-.4); R.paint('a'); rr(c,.35,-.3,.04,.5,.01); R.paint('a'); poly(c,[[.0,-.38],[.39,-.3],[.39,-.2],[0,-.28]]); R.paint('a'); }
+});
+add('microfone','Microfone','igreja',['microfone','pregador','louvor','voz','cantor','ministracao'],'prata',(c,R)=>{
+  poly(c,[[-.08,0],[.08,0],[.05,.44],[-.05,.44]]); R.paint('b'); circ(c,0,-.18,.2); R.paint('a');
+  c.save(); circ(c,0,-.18,.2); c.clip(); for(let k=-2;k<=2;k++){ c.beginPath(); c.moveTo(-.25,-.18+k*.07); c.lineTo(.25,-.18+k*.07); R.line('c',.008); c.beginPath(); c.moveTo(k*.07,-.4); c.lineTo(k*.07,.05); R.line('c',.008); } c.restore();
+  ell(c,0,.0,.12,.04); R.paint('c');
+});
+add('pergaminho','Pergaminho','igreja',['pergaminho','carta','rolo','escrito','decreto','lei'],'champanhe',(c,R)=>{
+  rr(c,-.3,-.32,.6,.64,.02); R.paint('a'); ell(c,0,-.32,.34,.06); R.paint('b'); ell(c,0,.32,.34,.06); R.paint('b');
+  for(let i=0;i<6;i++){ c.beginPath(); c.moveTo(-.2,-.2+i*.09); c.lineTo(i%2?.12:.2,-.2+i*.09); R.lineC('#78350f',.012); }
+});
+add('candelabro','Candelabro','igreja',['candelabro','menorah','luz','velas','castical'],'ouro',(c,R)=>{
+  rr(c,-.18,.4,.36,.06,.02); R.paint('a'); rr(c,-.025,-.1,.05,.5,.01); R.paint('a');
+  for(const s of [-1,1]) for(let k=1;k<=3;k++){ const x=s*.12*k; c.beginPath(); c.moveTo(0,.3); c.bezierCurveTo(x*.2,.38,x,.36,x,.1); c.lineTo(x,-.12); R.line('a',.03); rr(c,x-.02,-.22,.04,.1,.005); R.paintC('#ffffff',.003); ell(c,x,-.25,.016,.035); R.paintC('#fbbf24',.002); }
+  rr(c,-.02,-.22,.04,.1,.005); R.paintC('#ffffff',.003); ell(c,0,-.25,.016,.035); R.paintC('#fbbf24',.002);
+});
+add('peixe','Peixe (Ichthys)','igreja',['peixe','ichthys','cristao','simbolo','pescador'],'azul',(c,R)=>{
+  poly(c,[[.26,0],[.46,-.16],[.46,.16]]); R.paint('b');
+  c.beginPath(); c.moveTo(-.42,0); c.quadraticCurveTo(-.05,-.38,.3,0); c.quadraticCurveTo(-.05,.38,-.42,0); c.closePath(); R.paint('a');
+  circ(c,-.26,-.04,.03); R.paint('c',.003);
+});
+
+/* ===== DECORAÇÃO ===== */
+add('moldura','Canto ornamental','decor',['moldura','canto','borda','quadro','ornamento'],'ouro',(c,R)=>{
+  c.beginPath(); c.moveTo(-.45,.45); c.lineTo(-.45,-.3); c.quadraticCurveTo(-.45,-.45,-.3,-.45); c.lineTo(.45,-.45); R.line('a',.03);
+  c.beginPath(); c.moveTo(-.38,.4); c.lineTo(-.38,-.24); c.quadraticCurveTo(-.38,-.38,-.24,-.38); c.lineTo(.4,-.38); R.line('c',.012);
+  circ(c,-.36,-.36,.05); R.paint('a'); for(let i=0;i<R.n(2,4);i++){ circ(c,-.45+(i+1)*.12,-.45,.012); R.paint('c',.003); }
+});
+add('divisor','Divisor','decor',['divisor','linha','separador','traco'],'ouro',(c,R)=>{
+  c.beginPath(); c.moveTo(-.45,0); c.lineTo(-.1,0); c.moveTo(.1,0); c.lineTo(.45,0); R.line('a',.012);
+  poly(c,[[0,-.07],[.06,0],[0,.07],[-.06,0]]); R.paint('c'); circ(c,-.17,0,.016); R.paint('a'); circ(c,.17,0,.016); R.paint('a');
+});
+add('seta','Seta','decor',['seta','direcao','proximo','indicar'],'laranja',(c,R)=>{
+  poly(c,[[-.45,-.1],[.1,-.1],[.1,-.28],[.46,0],[.1,.28],[.1,.1],[-.45,.1]]); R.paint('a');
+});
+add('selo','Selo','decor',['selo','carimbo','distintivo','badge','emblema'],'ouro',(c,R)=>{
+  const n=R.n(14,26); c.beginPath(); for(let i=0;i<=200;i++){ const a=i/200*TAU, r=.44+Math.sin(a*n)*.025; const x=Math.cos(a)*r,y=Math.sin(a)*r; i?c.lineTo(x,y):c.moveTo(x,y); } c.closePath(); R.paint('a');
+  circ(c,0,0,.33); R.paint('c',.008); circ(c,0,0,.28); R.line('b',.01); starPath(c,5,.16,.07); R.paint('b');
+});
+add('pontos','Pontos','decor',['pontos','bolinhas','halftone','textura'],'ouro',(c,R)=>{
+  const n=R.n(5,8); for(let i=0;i<n;i++) for(let j=0;j<n;j++){ const x=(i-(n-1)/2)*(.9/n), y=(j-(n-1)/2)*(.9/n), d=Math.hypot(x,y); circ(c,x,y,Math.max(.01,(.5-d)*.07)); R.paint('a',.002,true); }
+});
+add('gema','Gema / Diamante','decor',['gema','diamante','joia','cristal','precioso'],'ciano',(c,R)=>{
+  poly(c,[[-.2,-.28],[.2,-.28],[.44,-.04],[0,.44],[-.44,-.04]]); R.paint('a');
+  poly(c,[[-.2,-.28],[-.1,-.04],[-.44,-.04]]); R.paint('c',.006); poly(c,[[-.1,-.04],[.1,-.04],[0,.44]]); R.paint('b',.006); poly(c,[[.2,-.28],[.44,-.04],[.1,-.04]]); R.paint('c',.006);
+});
+
+/* ------------------------------------------------------------------
+   DESENHAR UMA FORMA
+------------------------------------------------------------------ */
+function drawShape(ctx,shapeId,o,px){
+  const S=SHAPE_BY_ID[shapeId]; if(!S) return;
+  ctx.save(); ctx.scale(px,px); if(o.flip) ctx.scale(-1,1);
+  const R=makeR(ctx,getPal(o.colorway||S.def),o.style||'degrade',px,clamp(o.variant||0,0,VARIANTS-1),S.id);
+  try{ S.draw(ctx,R); }catch(e){ console.warn('elemento falhou',shapeId,e); }
+  ctx.restore();
+}
+const TOTAL_COMBOS=SHAPES.length*VARIANTS*COLORWAYS.length*STYLES.length*2;
+
+/* ------------------------------------------------------------------
+   ESTADO
+------------------------------------------------------------------ */
+const IMGS={}; let selectedId=null, hideSel=false;
+const lib={cat:'todos',color:'auto',style:'degrade',variant:0,flip:false};
+const BIG={feixe:.9,raios:.95,louros:.8,confete:.95,fogos:.7,pontos:.5,nuvem:.45,faiscas:.5,ondas:.5,arcoiris:.5};
+if(typeof editorState!=='undefined'&&!editorState.elements) editorState.elements=[];
+const elsOf=()=>{ if(!editorState.elements) editorState.elements=[]; return editorState.elements; };
+const findEl=id=>elsOf().find(e=>e.id===id);
+const aspectOf=el=>{ if(el.type==='img'){ const im=IMGS[el.imgId]; return im?im.height/im.width:1; } return 1; };
+const labelOf=e=>e.type==='img'?'Imagem':(SHAPE_BY_ID[e.shape]?SHAPE_BY_ID[e.shape].name:'Elemento');
+
+function drawEl(ctx,W,H,el){
+  const base=Math.min(W,H), px=el.size*base;
+  ctx.save(); ctx.translate(el.x*W,el.y*H); ctx.rotate((el.rot||0)*Math.PI/180); ctx.globalAlpha=clamp(el.opacity===undefined?1:el.opacity,0,1);
+  if(el.type==='img'){ const im=IMGS[el.imgId]; if(im){ if(el.flip) ctx.scale(-1,1); const w=px,h=px*im.height/im.width; ctx.drawImage(im,-w/2,-h/2,w,h); } }
+  else drawShape(ctx,el.shape,el,px);
+  ctx.restore();
+}
+function drawLayer(ctx,W,H,state,layer){ (state.elements||[]).forEach(el=>{ if((el.layer||'front')===layer) drawEl(ctx,W,H,el); }); }
+function drawSelection(ctx,W,H,el){
+  const rect=studioCanvas.getBoundingClientRect(), k=W/(rect.width||W), base=Math.min(W,H), w=el.size*base, hh=w*aspectOf(el);
+  ctx.save(); ctx.translate(el.x*W,el.y*H); ctx.rotate((el.rot||0)*Math.PI/180);
+  ctx.setLineDash([8*k,6*k]); ctx.lineWidth=2*k; ctx.strokeStyle='#fbbf24'; ctx.strokeRect(-w/2,-hh/2,w,hh); ctx.setLineDash([]);
+  ctx.fillStyle='#fbbf24'; ctx.fillRect(w/2-8*k,hh/2-8*k,16*k,16*k);
+  ctx.beginPath(); ctx.moveTo(0,-hh/2); ctx.lineTo(0,-hh/2-40*k); ctx.stroke(); ctx.beginPath(); ctx.arc(0,-hh/2-40*k,10*k,0,TAU); ctx.fill();
+  ctx.restore();
+}
+
+/* ------------------------------------------------------------------
+   GANCHOS NO RENDER ORIGINAL
+------------------------------------------------------------------ */
+const _origBG=window.drawBaseBackground;
+window.drawBaseBackground=function(ctx,W,H,colors,style,customBgImg,bgOverlay,state){
+  _origBG.apply(this,arguments);
+  if(state&&state.elements&&state.elements.length) drawLayer(ctx,W,H,state,'back');
+};
+const _origRender=window.renderArtToCanvas;
+window.renderArtToCanvas=function(canvas,tpl,state,hits){
+  _origRender.apply(this,arguments);
+  if(state&&state.elements&&state.elements.length){
+    const ctx=canvas.getContext('2d'); drawLayer(ctx,canvas.width,canvas.height,state,'front');
+    if(!hideSel&&canvas===studioCanvas&&selectedId){ const el=state.elements.find(e=>e.id===selectedId); if(el) drawSelection(ctx,canvas.width,canvas.height,el); }
+  }
+};
+const _origOpen=window.openTemplate;
+window.openTemplate=function(id,preserve){
+  _origOpen.apply(this,arguments);
+  if(!preserve){ editorState.elements=[]; selectedId=null; renderStudio(); }
+  try{ refreshSuggest(); refreshOnArt(); }catch(e){}
+};
+const _origSync=window.syncControlsFromState;
+window.syncControlsFromState=function(){ _origSync.apply(this,arguments); try{ refreshOnArt(); }catch(e){} };
+
+/* ------------------------------------------------------------------
+   ADICIONAR / EDITAR ELEMENTOS
+------------------------------------------------------------------ */
+function addElement(o){
+  const list=elsOf(), n=list.length, sh=SHAPE_BY_ID[o.shape]||{};
+  const el=Object.assign({id:uid(),type:'shape',shape:o.shape,variant:lib.variant,colorway:(lib.color==='auto'?(sh.def||'ouro'):lib.color),style:lib.style,flip:lib.flip,
+    x:.5+((n%5)-2)*.05,y:.42+((n%4)-1.5)*.05,size:BIG[o.shape]||.3,rot:0,opacity:1,layer:'front'},o);
+  list.push(el); selectedId=el.id; refreshOnArt(); renderStudio(); scheduleSaveDraft(true); return el;
+}
+function removeEl(id){ editorState.elements=elsOf().filter(e=>e.id!==id); if(selectedId===id) selectedId=null; refreshOnArt(); renderStudio(); scheduleSaveDraft(true); }
+function selectEl(id){ selectedId=id; refreshOnArt(); renderStudio(); }
+
+/* ------------------------------------------------------------------
+   ARRASTAR / GIRAR / REDIMENSIONAR NA ARTE
+------------------------------------------------------------------ */
+let drag=null;
+function toLocal(el,pt,W,H){ const dx=pt.x-el.x*W, dy=pt.y-el.y*H, a=(el.rot||0)*Math.PI/180, ca=Math.cos(a), sa=Math.sin(a); return {x:dx*ca+dy*sa,y:-dx*sa+dy*ca}; }
+function hitElement(pt,layer){
+  const W=studioCanvas.width,H=studioCanvas.height,base=Math.min(W,H),list=elsOf();
+  for(let i=list.length-1;i>=0;i--){ const el=list[i]; if((el.layer||'front')!==layer) continue; const l=toLocal(el,pt,W,H), w=el.size*base, hh=w*aspectOf(el); if(Math.abs(l.x)<=w/2&&Math.abs(l.y)<=hh/2) return el; }
+  return null;
+}
+function handleHit(el,pt,k){
+  const W=studioCanvas.width,H=studioCanvas.height,base=Math.min(W,H),w=el.size*base,hh=w*aspectOf(el),l=toLocal(el,pt,W,H),th=24*k;
+  if(Math.hypot(l.x-w/2,l.y-hh/2)<=th) return 'resize';
+  if(Math.hypot(l.x,l.y-(-hh/2-40*k))<=th) return 'rotate';
+  return null;
+}
+function startDrag(e,el,mode,pt){
+  e.stopPropagation(); e.preventDefault();
+  drag={el,mode,start:pt,ox:el.x,oy:el.y};
+  window.addEventListener('pointermove',onMove); window.addEventListener('pointerup',onUp); window.addEventListener('pointercancel',onUp);
+}
+function onMove(e){
+  if(!drag) return; const pt=getCanvasCoords(e),W=studioCanvas.width,H=studioCanvas.height,base=Math.min(W,H),el=drag.el;
+  if(drag.mode==='move'){ el.x=clamp(drag.ox+(pt.x-drag.start.x)/W,-.2,1.2); el.y=clamp(drag.oy+(pt.y-drag.start.y)/H,-.2,1.2); }
+  else if(drag.mode==='resize'){ const d=Math.hypot(pt.x-el.x*W,pt.y-el.y*H); el.size=clamp(d*2/(base*Math.hypot(1,aspectOf(el))),.03,1.6); }
+  else if(drag.mode==='rotate'){ let a=Math.atan2(pt.y-el.y*H,pt.x-el.x*W)*180/Math.PI+90; if(a>180) a-=360; if(e.shiftKey) a=Math.round(a/15)*15; el.rot=Math.round(a); }
+  renderStudio(); syncSelUI();
+}
+function onUp(){ window.removeEventListener('pointermove',onMove); window.removeEventListener('pointerup',onUp); window.removeEventListener('pointercancel',onUp); if(drag){ drag=null; scheduleSaveDraft(true); } }
+function onDown(e){
+  if(e.target!==studioCanvas) return; if($('editor-view').classList.contains('hidden')) return;
+  const pt=getCanvasCoords(e), k=studioCanvas.width/(studioCanvas.getBoundingClientRect().width||studioCanvas.width), sel=findEl(selectedId);
+  if(sel){ const hh=handleHit(sel,pt,k); if(hh){ startDrag(e,sel,hh,pt); return; } }
+  let hit=hitElement(pt,'front');
+  if(!hit){ const reg=findHitAt(pt.x,pt.y); if(!reg) hit=hitElement(pt,'back'); }
+  if(hit){ selectedId=hit.id; refreshOnArt(); renderStudio(); startDrag(e,hit,'move',pt); }
+  else if(selectedId){ selectedId=null; refreshOnArt(); renderStudio(); }
+}
+
+/* ------------------------------------------------------------------
+   PACOTES PRONTOS  [forma,x,y,tamanho,rotação,cor,variante,estilo,camada]
+------------------------------------------------------------------ */
+const PACKS=[
+ {id:'ceia',name:'Ceia do Senhor',icon:'🍷',items:[
+  ['feixe',.5,.32,.95,0,'ouro',6,'solido','back'],['coroa-espinhos',.16,.13,.24,-12,'bronze',7,'degrade','front'],['cruz',.86,.13,.2,8,'ouro',3,'brilho','front'],
+  ['calice',.13,.8,.24,-8,'ouro',5,'degrade','front'],['vinho',.87,.78,.27,6,'ouro',8,'degrade','front'],['uvas',.3,.88,.14,-6,'roxo',2,'degrade','front'],
+  ['trigo',.72,.88,.13,10,'amarelo',4,'degrade','front'],['brilho',.78,.3,.09,0,'branco',6,'brilho','front'],['brilho',.22,.42,.07,0,'branco',9,'brilho','front']]},
+ {id:'pascoa',name:'Páscoa / Ressurreição',icon:'✝️',items:[
+  ['raios',.5,.3,1.0,0,'ouro',12,'solido','back'],['cruz',.5,.14,.2,0,'ouro',9,'brilho','front'],['pomba',.18,.78,.22,-8,'branco',3,'sombra','front'],
+  ['pomba',.84,.72,.2,10,'branco',9,'sombra','front'],['brilho',.8,.28,.09,0,'branco',6,'brilho','front'],['flor',.14,.9,.12,0,'branco',8,'sombra','front']]},
+ {id:'natal',name:'Natal',icon:'🎄',items:[
+  ['estrela',.5,.1,.16,0,'ouro',2,'brilho','front'],['sino',.14,.2,.16,-12,'ouro',4,'degrade','front'],['sino',.86,.2,.16,12,'ouro',4,'degrade','front'],
+  ['presente',.14,.8,.18,-6,'vermelho',3,'degrade','front'],['presente',.86,.8,.18,6,'verde',5,'degrade','front'],['faiscas',.5,.5,.9,0,'branco',8,'brilho','back']]},
+ {id:'aniversario',name:'Aniversário / Festa',icon:'🎉',items:[
+  ['confete',.5,.5,1.0,0,'ouro',14,'solido','back'],['balao',.12,.2,.2,-8,'vermelho',3,'degrade','front'],['balao',.9,.16,.2,10,'azul',8,'degrade','front'],
+  ['balao',.2,.38,.16,6,'amarelo',12,'degrade','front'],['bolo',.14,.82,.2,-4,'rosa',5,'degrade','front'],['presente',.86,.82,.18,6,'roxo',7,'degrade','front']]},
+ {id:'louvor',name:'Louvor / Culto',icon:'🎤',items:[
+  ['raios',.5,.3,1.0,0,'ouro',10,'solido','back'],['microfone',.13,.8,.2,-10,'prata',4,'degrade','front'],['nota',.87,.78,.18,10,'branco',12,'sombra','front'],
+  ['halo',.5,.08,.36,0,'ouro',8,'brilho','front'],['brilho',.82,.26,.09,0,'branco',6,'brilho','front'],['brilho',.18,.4,.07,0,'branco',9,'brilho','front']]},
+ {id:'realeza',name:'Realeza / Honra',icon:'👑',items:[
+  ['louros',.5,.44,.95,0,'ouro',10,'solido','back'],['coroa',.5,.1,.22,0,'ouro',4,'degrade','front'],['estrela',.15,.16,.1,0,'ouro',2,'brilho','front'],
+  ['estrela',.85,.16,.1,0,'ouro',2,'brilho','front'],['floreio',.5,.9,.4,0,'ouro',6,'degrade','front']]}
+];
+function applyPack(id){
+  const p=PACKS.find(x=>x.id===id); if(!p) return;
+  p.items.forEach(([shape,x,y,size,rot,colorway,variant,style,layer])=>{ elsOf().push({id:uid(),type:'shape',shape,x,y,size,rot,colorway,variant,style,flip:false,opacity:1,layer}); });
+  selectedId=null; refreshOnArt(); renderStudio(); scheduleSaveDraft(true);
+}
+function suggestedPack(){
+  const t=(typeof currentTemplate!=='undefined'&&currentTemplate)?currentTemplate:null; if(!t) return null;
+  if(t.theme==='ceia') return 'ceia'; if(t.theme==='aniversariantes') return 'aniversario';
+  if(t.theme==='especiais'){ if(/pascoa/.test(t.id)) return 'pascoa'; if(/natal/.test(t.id)) return 'natal'; if(/criancas/.test(t.id)) return 'aniversario'; return 'realeza'; }
+  if(['pregador','jovens','aovivo','familia'].includes(t.theme)) return 'louvor';
+  if(t.theme==='missoes') return 'pascoa';
+  return null;
+}
+
+/* ------------------------------------------------------------------
+   GERADOR (texto → PNG sem fundo)
+------------------------------------------------------------------ */
+let genResults=[], genSel=0, genRound=0;
+const COLOR_WORDS=[['dourad','ouro'],['ouro','ouro'],['vinho','vinho'],['roxo','roxo'],['purpura','roxo'],['azul','azul'],['vermelh','vermelho'],['verde','verde'],['branc','branco'],['prat','prata'],['laranj','laranja'],['rosa','rosa'],['turquesa','turquesa'],['marrom','marrom'],['bronz','bronze'],['amarel','amarelo'],['pret','preto'],['coral','coral'],['lilas','lilas'],['esmeralda','esmeralda'],['champanhe','champanhe'],['sangue','sangue'],['ciano','ciano'],['indigo','indigo']];
+const STYLE_WORDS=[['brilh','brilho'],['neon','brilho'],['luminos','brilho'],['contorno','contorno'],['linha','contorno'],['sombra','sombra'],['vitral','vitral'],['degrade','degrade'],['gradiente','degrade'],['solid','solido'],['chapad','solido'],['flat','solido']];
+const CAT_WORDS=[['ceia','ceia'],['comunhao','ceia'],['realeza','realeza'],['real','realeza'],['fogo','luz'],['luz','luz'],['natureza','natureza'],['festa','festa'],['aniversario','festa'],['igreja','igreja'],['louvor','igreja'],['decor','decor'],['enfeite','decor']];
+const IDEAS=['coroa de espinhos','vinho derramando','cálice dourado brilho','pomba branca','balões coloridos','chama de fogo','cruz com raios','estrela dourada','coroa de louros','uvas roxas'];
+const STYLE_CYCLE=['degrade','brilho','solido','sombra','vitral','contorno'];
+
+function buildFromPrompt(txt,round){
+  const q=normalizeText(txt);
+  const scored=SHAPES.map(s=>{ let sc=0; s.kw.forEach(k=>{ if(q.includes(normalizeText(k))) sc+=2; }); if(q.includes(normalizeText(s.name))) sc+=3; return {s,sc}; }).filter(x=>x.sc>0).sort((a,b)=>b.sc-a.sc);
+  const topSc=scored.length?scored[0].sc:0;
+  let shapes=scored.filter(x=>x.sc>=topSc*0.6).slice(0,3).map(x=>x.s), note='';
+  if(!shapes.length){ const cw=CAT_WORDS.find(([w])=>q.includes(w)); shapes=cw?SHAPES.filter(s=>s.cat===cw[1]):[]; if(!shapes.length){ shapes=[...SHAPES].sort(()=>Math.random()-.5).slice(0,4); note='Não reconheci o pedido — veja sugestões aleatórias.'; } }
+  const cw=COLOR_WORDS.find(([w])=>q.includes(w)), sw=STYLE_WORDS.find(([w])=>q.includes(w)), out=[];
+  const wordOfShape=cw&&shapes.some(s=>normalizeText(s.name+' '+s.kw.join(' ')).includes(cw[0]));
+  const color=(cw&&!wordOfShape)?cw[1]:null, style=sw?sw[1]:null;
+  for(let i=0;i<12;i++){ const s=shapes[i%shapes.length]; out.push({shape:s.id,variant:(i*7+round*3)%VARIANTS,colorway:color||(i%3===0?s.def:COLORWAYS[(i*3+round*5)%22].id),style:style||STYLE_CYCLE[(i+round)%STYLE_CYCLE.length],flip:false}); }
+  out.note=note||('Entendi: '+shapes.map(s=>s.name).join(', ')+(color?' · '+color:'')+(style?' · '+style:'')); return out;
+}
+function thumbCanvas(cfg,px){ const cv=document.createElement('canvas'); cv.width=cv.height=px; const ctx=cv.getContext('2d'); ctx.translate(px/2,px/2); drawShape(ctx,cfg.shape,cfg,px*.9); return cv; }
+function genRun(more){
+  const txt=$('gen-prompt').value.trim(); if(!txt){ toast('Escreva o que você quer. Ex: coroa de espinhos dourada'); return; }
+  if(more) genRound++; else genRound=0;
+  genResults=buildFromPrompt(txt,genRound); genSel=0; renderGen();
+}
+function renderGen(){
+  const box=$('gen-results'); box.innerHTML=''; $('gen-note').textContent=genResults.note||'';
+  genResults.forEach((cfg,i)=>{ const b=document.createElement('button'); b.type='button'; b.dataset.i=i; b.className='rounded border '+(i===genSel?'border-amber-500 bg-amber-500/10':'border-zinc-800 bg-zinc-900')+' p-0.5'; const cv=thumbCanvas(cfg,92); cv.style.width='100%'; cv.style.height='auto'; b.appendChild(cv); box.appendChild(b); });
+  $('gen-actions').classList.toggle('hidden',!genResults.length);
+}
+function genUse(){ const cfg=genResults[genSel]; if(cfg) addElement({shape:cfg.shape,variant:cfg.variant,colorway:cfg.colorway,style:cfg.style,flip:false}); }
+function genDownload(){
+  const cfg=genResults[genSel]; if(!cfg) return; const px=1024, cv=document.createElement('canvas'); cv.width=cv.height=px; const ctx=cv.getContext('2d'); ctx.translate(px/2,px/2); drawShape(ctx,cfg.shape,cfg,px*.9);
+  cv.toBlob(b=>{ if(b) saveBlob(b,'elemento-'+cfg.shape+'-'+(cfg.variant+1)+'.png'); },'image/png');
+}
+
+/* ------------------------------------------------------------------
+   DOWNLOAD CORRIGIDO
+------------------------------------------------------------------ */
+let toastEl=null,toastTimer=null;
+function toast(html,ms){
+  if(!toastEl){ toastEl=document.createElement('div'); toastEl.style.cssText='position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:99999;background:#18181c;color:#f4f4f5;border:1px solid #f59e0b;border-radius:10px;padding:10px 16px;font:600 13px Inter,sans-serif;max-width:92vw;box-shadow:0 10px 30px rgba(0,0,0,.5);text-align:center'; document.body.appendChild(toastEl); }
+  toastEl.innerHTML=html; toastEl.style.display='block'; clearTimeout(toastTimer); toastTimer=setTimeout(()=>{ toastEl.style.display='none'; },ms||6000);
+}
+function saveBlob(blob,name){
+  const url=URL.createObjectURL(blob), a=document.createElement('a'); a.href=url; a.download=name; a.rel='noopener'; a.style.display='none'; document.body.appendChild(a); a.click();
+  setTimeout(()=>a.remove(),1500); setTimeout(()=>URL.revokeObjectURL(url),180000);
+  toast('✅ Imagem pronta! Se o download não começar, <a href="'+url+'" target="_blank" rel="noopener" style="color:#fbbf24;text-decoration:underline">toque aqui para abrir</a> e salve a imagem.',9000);
+}
+window.downloadPNG=function(){
+  hideSel=true; try{ renderStudio(); }catch(e){}
+  const fmt=FORMATS[editorState.format], name='ad-jardim-mariano-'+currentTemplate.id+'-'+fmt.width+'x'+fmt.height+'.png';
+  const done=()=>{ hideSel=false; try{ renderStudio(); }catch(e){} };
+  try{
+    studioCanvas.toBlob(b=>{ done(); if(b) saveBlob(b,name); else toast('⚠️ Não foi possível gerar a imagem. Tente reduzir o tamanho das fotos.'); },'image/png');
+  }catch(err){ done(); toast('⚠️ O navegador bloqueou a exportação: '+esc(err.message)); }
+};
+
+/* ------------------------------------------------------------------
+   RECORTE MELHOR (IA profissional + acabamento)
+------------------------------------------------------------------ */
+const _origRemoveBg=window.removeBackgroundAI;
+const withTimeout=(p,ms)=>Promise.race([p,new Promise((_,rej)=>setTimeout(()=>rej(new Error('timeout')),ms))]);
+async function imglyRemove(imgEl){
+  const mod=await withTimeout(import('https://cdn.jsdelivr.net/npm/@imgly/background-removal@1.5.5/+esm'),25000);
+  const removeBackground=mod.removeBackground||mod.default; if(!removeBackground) throw new Error('modulo');
+  const sc=Math.min(1,1400/Math.max(imgEl.width,imgEl.height)), w=Math.max(1,Math.round(imgEl.width*sc)), h=Math.max(1,Math.round(imgEl.height*sc));
+  const c=document.createElement('canvas'); c.width=w; c.height=h; c.getContext('2d').drawImage(imgEl,0,0,w,h);
+  const blob=await new Promise(r=>c.toBlob(r,'image/png'));
+  const out=await withTimeout(removeBackground(blob,{output:{format:'image/png',quality:1},progress:(k,cur,tot)=>{ if(tot&&String(k).indexOf('fetch')===0) setCutoutStatus('✂️ Baixando a IA de recorte: '+Math.round(cur/tot*100)+'% (só na 1ª vez)...',true); else setCutoutStatus('✂️ Recortando a pessoa com precisão...',true); }}),240000);
+  const url=URL.createObjectURL(out);
+  return await new Promise((res,rej)=>{ const im=new Image(); im.onload=()=>res(im); im.onerror=()=>rej(new Error('img')); im.src=url; });
+}
+function refineCutout(img){
+  return new Promise(res=>{
+    try{
+      const w=img.width,h=img.height,c=document.createElement('canvas'); c.width=w; c.height=h; const ctx=c.getContext('2d',{willReadFrequently:true}); ctx.drawImage(img,0,0);
+      const id=ctx.getImageData(0,0,w,h), d=id.data; let x0=w,y0=h,x1=0,y1=0;
+      for(let y=0;y<h;y++) for(let x=0;x<w;x++){ const i=(y*w+x)*4+3; let t=d[i]/255; if(t<=0.1) t=0; else if(t>=0.93) t=1; else { t=(t-0.1)/0.83; t=t*t*(3-2*t); } d[i]=Math.round(t*255); if(d[i]>24){ if(x<x0)x0=x; if(x>x1)x1=x; if(y<y0)y0=y; if(y>y1)y1=y; } }
+      ctx.putImageData(id,0,0);
+      if(x1<=x0||y1<=y0){ res(img); return; }
+      const pad=Math.round(Math.max(w,h)*0.015); x0=Math.max(0,x0-pad); y0=Math.max(0,y0-pad); x1=Math.min(w-1,x1+pad); y1=Math.min(h-1,y1+pad);
+      const cw=x1-x0+1, ch=y1-y0+1, oc=document.createElement('canvas'); oc.width=cw; oc.height=ch; oc.getContext('2d').drawImage(c,x0,y0,cw,ch,0,0,cw,ch);
+      const out=new Image(); out.onload=()=>res(out); out.onerror=()=>res(img); out.src=oc.toDataURL('image/png');
+    }catch(e){ res(img); }
+  });
+}
+window.removeBackgroundAI=async function(imgEl){
+  let res=null;
+  try{ setCutoutStatus('✂️ Preparando a IA de recorte profissional...',true); res=await imglyRemove(imgEl); }catch(e){ console.warn('recorte profissional indisponível',e); }
+  if(!res){ setCutoutStatus('✂️ Usando o recorte alternativo...',true); res=await _origRemoveBg(imgEl); }
+  return await refineCutout(res);
+};
+
+/* ------------------------------------------------------------------
+   INTERFACE
+------------------------------------------------------------------ */
+function buildUI(){
+  const tabs=document.querySelector('.tool-tab')&&document.querySelector('.tool-tab').parentElement;
+  if(tabs){
+    tabs.classList.remove('grid-cols-4'); tabs.classList.add('grid-cols-5');
+    tabs.querySelectorAll('.tool-tab').forEach(b=>{ b.classList.add('text-[11px]'); b.classList.remove('text-xs'); });
+    const btn=document.createElement('button'); btn.setAttribute('onclick',"switchToolTab('elementos')"); btn.dataset.tool='elementos';
+    btn.className='tool-tab py-2.5 text-[11px] font-semibold border-b-2 transition text-zinc-400 border-transparent'; btn.textContent='Elementos ✨'; tabs.appendChild(btn);
+  }
+  const host=$('panel-selos')&&$('panel-selos').parentElement; if(!host) return;
+  const panel=document.createElement('div'); panel.id='panel-elementos'; panel.className='tool-panel hidden space-y-4';
+  panel.innerHTML=
+  '<div id="el-suggest"></div>'+
+  '<div class="bg-zinc-950 border border-amber-500/40 rounded-lg p-3 space-y-2">'+
+    '<span class="text-xs font-semibold text-amber-400">✨ Gerador de Elementos (PNG sem fundo)</span>'+
+    '<div class="flex gap-1.5"><input id="gen-prompt" type="text" placeholder="Ex: coroa de espinhos dourada" class="flex-1 min-w-0 bg-zinc-900 border border-zinc-800 rounded px-2.5 py-1.5 text-xs text-white focus:border-amber-500 focus:outline-none"><button id="gen-go" type="button" class="px-3 py-1.5 rounded bg-amber-500 hover:bg-amber-400 text-zinc-950 text-xs font-bold">Gerar</button></div>'+
+    '<div id="gen-ideas" class="flex flex-wrap gap-1"></div>'+
+    '<p id="gen-note" class="text-[11px] text-amber-300"></p>'+
+    '<div id="gen-results" class="grid grid-cols-4 gap-1.5"></div>'+
+    '<div id="gen-actions" class="hidden flex flex-wrap gap-1.5"><button id="gen-use" type="button" class="px-2.5 py-1.5 rounded bg-amber-500 text-zinc-950 text-[11px] font-bold">Usar na arte</button><button id="gen-dl" type="button" class="px-2.5 py-1.5 rounded bg-zinc-800 border border-zinc-700 text-[11px] text-white">Baixar PNG sem fundo</button><button id="gen-more" type="button" class="px-2.5 py-1.5 rounded bg-zinc-900 border border-zinc-700 text-[11px] text-zinc-300">🎲 Mais variações</button></div>'+
+    '<p class="text-[10px] text-zinc-500">Gerador inteligente que roda no próprio navegador (sem internet e sem custo). Cada resultado é um PNG com fundo transparente.</p>'+
+  '</div>'+
+  '<div><label class="block text-[11px] font-semibold uppercase text-zinc-400 mb-2">Pacotes prontos (adiciona vários de uma vez)</label><div id="el-packs" class="grid grid-cols-2 gap-1.5"></div></div>'+
+  '<div class="space-y-2"><div class="flex items-center justify-between"><label class="text-[11px] font-semibold uppercase text-zinc-400">Biblioteca</label><span class="text-[10px] text-amber-400 font-mono" id="el-total"></span></div>'+
+    '<div id="el-cats" class="flex flex-wrap gap-1"></div>'+
+    '<div id="el-grid" class="grid grid-cols-4 gap-1.5 max-h-56 overflow-y-auto pr-0.5"></div>'+
+    '<div><span class="text-[11px] text-zinc-400">Cor</span><div id="el-colors" class="grid grid-cols-8 gap-1 mt-1"></div></div>'+
+    '<div><span class="text-[11px] text-zinc-400">Estilo</span><div id="el-styles" class="flex flex-wrap gap-1 mt-1"></div></div>'+
+    '<div><div class="flex justify-between text-[11px] text-zinc-400 mb-1"><span>Variante</span><span id="val-el-variant" class="font-mono text-amber-400">1/20</span></div><input id="el-variant" type="range" min="1" max="20" value="1" class="w-full h-1.5 bg-zinc-800 rounded-lg"></div>'+
+    '<div class="flex items-center justify-between"><label class="flex items-center gap-2 text-xs text-zinc-300"><input id="el-flip" type="checkbox" class="rounded bg-zinc-950 border-zinc-700 text-amber-500"> Espelhar</label><button id="el-random" type="button" class="px-2.5 py-1 rounded bg-zinc-900 border border-zinc-700 text-[11px] text-zinc-200">🎲 Surpreenda-me</button></div>'+
+  '</div>'+
+  '<div id="el-onart" class="pt-3 border-t border-zinc-800"></div>'+
+  '<div class="pt-3 border-t border-zinc-800 space-y-1.5"><label class="block text-[11px] font-semibold uppercase text-zinc-400">Seu próprio PNG / imagem</label><label class="block text-center py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-xs font-medium text-white cursor-pointer">Enviar imagem como elemento<input id="el-upload" type="file" accept="image/*" class="hidden"></label><p class="text-[10px] text-zinc-500">Dica: depois de enviar, use "Recortar fundo (IA)" para deixar sem fundo.</p></div>';
+  host.appendChild(panel);
+
+  $('el-total').textContent='+'+TOTAL_COMBOS.toLocaleString('pt-BR')+' variações';
+  $('gen-ideas').innerHTML=IDEAS.map(t=>'<button type="button" data-idea="'+esc(t)+'" class="px-2 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-[10px] text-zinc-300 hover:text-white">'+esc(t)+'</button>').join('');
+  $('el-packs').innerHTML=PACKS.map(p=>'<button type="button" data-pack="'+p.id+'" class="px-2 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-[11px] text-zinc-200 text-left">'+p.icon+' '+esc(p.name)+'</button>').join('');
+
+  $('gen-go').addEventListener('click',()=>genRun(false));
+  $('gen-prompt').addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); genRun(false); } });
+  $('gen-ideas').addEventListener('click',e=>{ const b=e.target.closest('[data-idea]'); if(b){ $('gen-prompt').value=b.dataset.idea; genRun(false); } });
+  $('gen-results').addEventListener('click',e=>{ const b=e.target.closest('[data-i]'); if(b){ genSel=+b.dataset.i; renderGen(); } });
+  $('gen-use').addEventListener('click',genUse); $('gen-dl').addEventListener('click',genDownload); $('gen-more').addEventListener('click',()=>genRun(true));
+  $('el-packs').addEventListener('click',e=>{ const b=e.target.closest('[data-pack]'); if(b) applyPack(b.dataset.pack); });
+  $('el-suggest').addEventListener('click',e=>{ const b=e.target.closest('[data-pack]'); if(b) applyPack(b.dataset.pack); });
+  $('el-cats').addEventListener('click',e=>{ const b=e.target.closest('[data-cat]'); if(b){ lib.cat=b.dataset.cat; renderCats(); renderGrid(); } });
+  $('el-grid').addEventListener('click',e=>{ const b=e.target.closest('[data-shape]'); if(b) addElement({shape:b.dataset.shape}); });
+  $('el-colors').addEventListener('click',e=>{ const b=e.target.closest('[data-col]'); if(b){ lib.color=b.dataset.col; renderColors(); renderGrid(); } });
+  $('el-styles').addEventListener('click',e=>{ const b=e.target.closest('[data-st]'); if(b){ lib.style=b.dataset.st; renderStyles(); renderGrid(); } });
+  $('el-variant').addEventListener('input',e=>{ lib.variant=(+e.target.value)-1; $('val-el-variant').textContent=e.target.value+'/20'; renderGrid(); });
+  $('el-flip').addEventListener('change',e=>{ lib.flip=e.target.checked; renderGrid(); });
+  $('el-random').addEventListener('click',()=>{ const s=SHAPES[Math.floor(Math.random()*SHAPES.length)]; addElement({shape:s.id,variant:Math.floor(Math.random()*VARIANTS),colorway:COLORWAYS[Math.floor(Math.random()*22)].id,style:STYLES[Math.floor(Math.random()*STYLES.length)].id,flip:Math.random()<.5}); });
+  $('el-upload').addEventListener('change',e=>{ const f=e.target.files[0]; if(!f) return; const r=new FileReader(); r.onload=async ev=>{ const im=await downscaleDataUrl(ev.target.result,1400,'image/png',1); const id=uid(); IMGS[id]=im; addElement({type:'img',imgId:id,shape:'',size:.4}); }; r.readAsDataURL(f); e.target.value=''; });
+
+  const box=$('el-onart');
+  box.addEventListener('click',async e=>{
+    const b=e.target.closest('[data-act]'); if(!b) return; const act=b.dataset.act, el=findEl(selectedId);
+    if(act==='select'){ selectEl(b.dataset.id); return; }
+    if(act==='clear'){ editorState.elements=[]; selectedId=null; refreshOnArt(); renderStudio(); scheduleSaveDraft(true); return; }
+    if(!el) return;
+    if(act==='del') removeEl(el.id);
+    else if(act==='flip'){ el.flip=!el.flip; renderStudio(); scheduleSaveDraft(true); }
+    else if(act==='layer'){ el.layer=(el.layer==='back')?'front':'back'; refreshOnArt(); renderStudio(); scheduleSaveDraft(true); }
+    else if(act==='dup'){ const n=Object.assign({},el,{id:uid(),x:clamp(el.x+.04,0,1),y:clamp(el.y+.04,0,1)}); elsOf().push(n); selectedId=n.id; refreshOnArt(); renderStudio(); scheduleSaveDraft(true); }
+    else if(act==='up'||act==='down'){ const l=elsOf(), i=l.indexOf(el), j=act==='up'?i+1:i-1; if(j>=0&&j<l.length){ l[i]=l[j]; l[j]=el; } refreshOnArt(); renderStudio(); scheduleSaveDraft(true); }
+    else if(act==='apply'&&el.type==='shape'){ el.variant=lib.variant; el.style=lib.style; if(lib.color!=='auto') el.colorway=lib.color; el.flip=lib.flip; renderStudio(); scheduleSaveDraft(true); }
+    else if(act==='cut'&&el.type==='img'){ const im=IMGS[el.imgId]; if(!im) return; b.disabled=true; b.textContent='Recortando...'; try{ const out=await window.removeBackgroundAI(im); IMGS[el.imgId]=out; setCutoutStatus('✅ Fundo removido do elemento!',true); setTimeout(()=>setCutoutStatus('',false),3000); }catch(err){ toast('⚠️ Não consegui recortar agora. Tente de novo em instantes.'); } refreshOnArt(); renderStudio(); }
+  });
+  box.addEventListener('input',e=>{
+    const el=findEl(selectedId); if(!el) return; const id=e.target.id;
+    if(id==='sel-size') el.size=(+e.target.value)/100; else if(id==='sel-rot') el.rot=+e.target.value; else if(id==='sel-op') el.opacity=(+e.target.value)/100; else return;
+    renderStudio(); scheduleSaveDraft(true);
+  });
+  document.addEventListener('keydown',e=>{
+    if((e.key==='Delete'||e.key==='Backspace')&&selectedId){ const t=e.target&&e.target.tagName; if(t==='INPUT'||t==='TEXTAREA'||t==='SELECT') return; if($('editor-view').classList.contains('hidden')) return; e.preventDefault(); removeEl(selectedId); }
+  });
+  $('canvas-wrapper').addEventListener('pointerdown',onDown,true);
+
+  renderCats(); renderColors(); renderStyles(); renderGrid(); refreshSuggest(); refreshOnArt();
+}
+
+function renderCats(){ $('el-cats').innerHTML=CATS.map(c=>'<button type="button" data-cat="'+c.id+'" class="px-2 py-1 rounded text-[11px] border '+(c.id===lib.cat?'bg-amber-500 text-zinc-950 border-amber-400 font-bold':'bg-zinc-900 border-zinc-800 text-zinc-300')+'">'+c.name+'</button>').join(''); }
+function renderColors(){
+  $('el-colors').innerHTML='<button type="button" data-col="auto" title="Cor automática" class="h-6 rounded text-[9px] font-bold '+(lib.color==='auto'?'ring-2 ring-amber-400':'')+' bg-zinc-800 text-zinc-200 col-span-2">AUTO</button>'+
+  COLORWAYS.map(cw=>{ const p=getPal(cw.id); return '<button type="button" data-col="'+cw.id+'" title="'+esc(cw.name)+'" class="h-6 rounded '+(lib.color===cw.id?'ring-2 ring-amber-400':'')+'" style="background:linear-gradient(135deg,'+p.c+','+p.a+' 55%,'+p.b+')"></button>'; }).join('');
+}
+function renderStyles(){ $('el-styles').innerHTML=STYLES.map(s=>'<button type="button" data-st="'+s.id+'" class="px-2 py-1 rounded text-[11px] border '+(s.id===lib.style?'bg-amber-500 text-zinc-950 border-amber-400 font-bold':'bg-zinc-900 border-zinc-800 text-zinc-300')+'">'+s.name+'</button>').join(''); }
+function renderGrid(){
+  const g=$('el-grid'); if(!g) return; g.innerHTML='';
+  SHAPES.filter(s=>lib.cat==='todos'||s.cat===lib.cat).forEach(s=>{
+    const b=document.createElement('button'); b.type='button'; b.dataset.shape=s.id; b.title=s.name; b.className='rounded border border-zinc-800 bg-zinc-900 hover:border-amber-500 p-0.5';
+    const cv=thumbCanvas({shape:s.id,variant:lib.variant,colorway:lib.color==='auto'?s.def:lib.color,style:lib.style,flip:lib.flip},84); cv.style.width='100%'; cv.style.height='auto'; b.appendChild(cv); g.appendChild(b);
+  });
+}
+function refreshSuggest(){
+  const el=$('el-suggest'); if(!el) return; const id=suggestedPack(), p=PACKS.find(x=>x.id===id);
+  el.innerHTML=p?'<div class="bg-amber-500/10 border border-amber-500/40 rounded-lg p-2.5 flex items-center justify-between gap-2"><span class="text-[11px] text-amber-200">Sugerido para este modelo: <b>'+p.icon+' '+esc(p.name)+'</b></span><button type="button" data-pack="'+p.id+'" class="shrink-0 px-2.5 py-1 rounded bg-amber-500 text-zinc-950 text-[11px] font-bold">Aplicar</button></div>':'';
+}
+function selectedControlsHTML(el){
+  const isImg=el.type==='img';
+  return '<div class="bg-zinc-950 border border-amber-500/40 rounded-lg p-3 space-y-2 mt-2">'+
+   '<div class="flex justify-between"><span class="text-xs font-semibold text-amber-400">Selecionado</span><span class="text-[11px] text-zinc-400">'+esc(labelOf(el))+'</span></div>'+
+   '<div><div class="flex justify-between text-[11px] text-zinc-400"><span>Tamanho</span></div><input id="sel-size" type="range" min="3" max="160" value="'+Math.round(el.size*100)+'" class="w-full h-1.5 bg-zinc-800 rounded-lg"></div>'+
+   '<div><div class="flex justify-between text-[11px] text-zinc-400"><span>Rotação</span></div><input id="sel-rot" type="range" min="-180" max="180" value="'+Math.round(el.rot||0)+'" class="w-full h-1.5 bg-zinc-800 rounded-lg"></div>'+
+   '<div><div class="flex justify-between text-[11px] text-zinc-400"><span>Opacidade</span></div><input id="sel-op" type="range" min="10" max="100" value="'+Math.round((el.opacity===undefined?1:el.opacity)*100)+'" class="w-full h-1.5 bg-zinc-800 rounded-lg"></div>'+
+   '<div class="flex flex-wrap gap-1.5 pt-1">'+
+    '<button type="button" data-act="flip" class="px-2 py-1 rounded bg-zinc-900 border border-zinc-700 text-[11px] text-zinc-200">⇄ Espelhar</button>'+
+    '<button type="button" data-act="layer" class="px-2 py-1 rounded bg-zinc-900 border border-zinc-700 text-[11px] text-zinc-200">'+(el.layer==='back'?'⬆ Para frente do texto':'⬇ Atrás do texto')+'</button>'+
+    '<button type="button" data-act="up" class="px-2 py-1 rounded bg-zinc-900 border border-zinc-700 text-[11px] text-zinc-200">▲</button>'+
+    '<button type="button" data-act="down" class="px-2 py-1 rounded bg-zinc-900 border border-zinc-700 text-[11px] text-zinc-200">▼</button>'+
+    '<button type="button" data-act="dup" class="px-2 py-1 rounded bg-zinc-900 border border-zinc-700 text-[11px] text-zinc-200">Duplicar</button>'+
+    (isImg?'<button type="button" data-act="cut" class="px-2 py-1 rounded bg-emerald-500/15 border border-emerald-500/40 text-[11px] text-emerald-300">✂️ Recortar fundo (IA)</button>':'<button type="button" data-act="apply" class="px-2 py-1 rounded bg-zinc-900 border border-zinc-700 text-[11px] text-zinc-200">Aplicar cor/estilo/variante acima</button>')+
+    '<button type="button" data-act="del" class="px-2 py-1 rounded bg-rose-500/15 text-rose-400 text-[11px]">Excluir</button>'+
+   '</div></div>';
+}
+function refreshOnArt(){
+  const box=$('el-onart'); if(!box) return; const els=elsOf(), sel=findEl(selectedId);
+  box.innerHTML='<div class="flex items-center justify-between mb-1.5"><span class="text-[11px] font-semibold uppercase text-zinc-400">Na arte ('+els.length+')</span>'+(els.length?'<button type="button" data-act="clear" class="text-[11px] text-rose-400">Limpar todos</button>':'')+'</div>'+
+  (els.length?'<div class="flex flex-wrap gap-1">'+els.map((e,i)=>'<button type="button" data-act="select" data-id="'+e.id+'" class="px-2 py-1 rounded text-[11px] border '+(e.id===selectedId?'bg-amber-500 text-zinc-950 border-amber-400 font-bold':'bg-zinc-900 border-zinc-800 text-zinc-300')+'">'+(i+1)+'. '+esc(labelOf(e))+'</button>').join('')+'</div>':'<p class="text-[11px] text-zinc-500">Clique em um elemento acima para adicionar. Na arte: arraste para mover, use o quadrado do canto para aumentar e a bolinha de cima para girar.</p>')+
+  (sel?selectedControlsHTML(sel):'');
+}
+function syncSelUI(){
+  const el=findEl(selectedId); if(!el) return;
+  const s=$('sel-size'),r=$('sel-rot'),o=$('sel-op'); if(s) s.value=Math.round(el.size*100); if(r) r.value=Math.round(el.rot||0); if(o) o.value=Math.round((el.opacity===undefined?1:el.opacity)*100);
+}
+
+window.ElementosStudio={SHAPES,COLORWAYS,STYLES,VARIANTS,TOTAL_COMBOS,drawShape,addElement,applyPack,PACKS};
+
+try{ buildUI(); }catch(err){ console.error('Elementos Studio: falha ao montar a interface',err); }
+})();
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Great+Vibes&family=Lobster&family=Pacifico&family=Permanent+Marker&family=Righteous&display=swap" rel="stylesheet">
+
+
+</body></html>
